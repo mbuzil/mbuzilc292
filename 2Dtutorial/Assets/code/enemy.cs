@@ -23,11 +23,12 @@ public class enemy : MonoBehaviour
         {
             gameManager.instance.InstantiateGameOver();
         }
-        else
+        else if(collision.gameObject.tag == "Laser" || collision.gameObject.tag == "BigLaser")
         {
             gameManager.instance.IncreaseScore(10);
         }
         Destroy(gameObject);
-        Destroy(collision.gameObject);
+        if(collision.gameObject.tag != "BigLaser")
+            Destroy(collision.gameObject);
     }
 }
