@@ -2665,7 +2665,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shotTimer: 3
-  movementThreshold: 0.003
+  movementThreshold: 0.0003
   player1BallsText: {fileID: 1965612831}
   player2BallsText: {fileID: 2113384235}
   currentTurnText: {fileID: 1015118716}

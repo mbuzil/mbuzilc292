@@ -41,6 +41,13 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] Transform headPosition;
 
+    void ReturnCue(Collider cue)
+    {
+        cue.gameObject.transform.position = headPosition.position;
+        cue.gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
+        cue.gameObject.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+    }
+
     void Start()
     {
         currentPlayer = CurrentPlayer.Player1;
@@ -72,8 +79,6 @@ public class GameManager : MonoBehaviour
             }
             if(allStopped || !ballPocketed)
             {
-                Debug.Log(ballPocketed);
-                Debug.Log(willSwapPlayers);
                 isWaitingForBallMovementToStop = false;
                 if(willSwapPlayers || !ballPocketed)
                 {
@@ -250,20 +255,18 @@ public class GameManager : MonoBehaviour
     {
         if (currentPlayer == CurrentPlayer.Player1)
         {
-            Debug.Log("PLS no");
             currentPlayer = CurrentPlayer.Player2;
             currentTurnText.text = "Current Turn: Player 2";
         }
         else
         {
             currentPlayer = CurrentPlayer.Player1;
-            Debug.Log("PLS");
             currentTurnText.text = "Current Turn: Player 1";
         }
-        Debug.Log(currentPlayer);
         willSwapPlayers = false;
         SwitchCameras();
     }
+
 
     private void OnTriggerEnter(Collider other)
     {
@@ -276,9 +279,7 @@ public class GameManager : MonoBehaviour
             }
             else
             {
-                other.gameObject.transform.position = headPosition.position;
-                other.gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
-                other.gameObject.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+                ReturnCue(other);
             }
         }
     }
