@@ -143,11 +143,11 @@ public class GameManager : MonoBehaviour
     {
         if(currentPlayer == CurrentPlayer.Player1)
         {
-            Lose("Player 1 Hit in the Eight Ball Too Early and Has Lost");
+            Lose("Player 1 Hit in the Eight Ball Too Early and Has Lost. Player 2 Wins!");
         }
         else
         {
-            Lose("Player 1 Hit in the Eight Ball Too Early and Has Lost");
+            Lose("Player 2 Hit in the Eight Ball Too Early and Has Lost. Player 1 Wins!");
         }
     }
 
