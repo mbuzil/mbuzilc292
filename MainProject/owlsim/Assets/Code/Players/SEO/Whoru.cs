@@ -15,5 +15,6 @@ public class Whoru : Player
         map5Score = 0;
         seasonScore = 0;
         role = "DPS";
+        effectiveSkill = 0;
     }
 }

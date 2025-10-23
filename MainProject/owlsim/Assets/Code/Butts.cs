@@ -12,4 +12,9 @@ public class Butts : MonoBehaviour
     {
         cs.GetComponent<Console>().test();
     }
+
+    public void Press2()
+    {
+        cs.GetComponent<Console>().tourney();
+    }
 }

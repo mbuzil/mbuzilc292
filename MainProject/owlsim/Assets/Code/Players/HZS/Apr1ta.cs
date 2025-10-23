@@ -15,5 +15,6 @@ public class Apr1ta : Player
         map5Score = 0;
         seasonScore = 0;
         role = "DPS";
+        effectiveSkill = 0;
     }
 }

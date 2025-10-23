@@ -15,5 +15,6 @@ public class Tobi : Player
         map5Score = 0;
         seasonScore = 0;
         role = "Support";
+        effectiveSkill = 0;
     }
 }

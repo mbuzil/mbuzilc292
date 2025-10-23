@@ -15,5 +15,6 @@ public class Gesture : Player
         map5Score = 0;
         seasonScore = 0;
         role = "Tank";
+        effectiveSkill = 0;
     }
 }

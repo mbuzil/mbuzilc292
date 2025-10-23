@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Elsa : Player
+public class Oge : Player
 {
-    public Elsa()
+    public Oge()
     {
-        ign = "Elsa";
+        ign = "OGE";
         skill = 75;
         map1Score = 0;
         map2Score = 0;
