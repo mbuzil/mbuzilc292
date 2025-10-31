@@ -21,6 +21,12 @@ public class Team : MonoBehaviour
     public int wins;
     public int mapwins;
     public int maploss;
+    public int wins2;
+    public int mapwins2;
+    public int maploss2;
+    public int wins3;
+    public int mapwins3;
+    public int maploss3;
     public Player[] tanks;
     public Player[] dps;
     public Player[] supports;

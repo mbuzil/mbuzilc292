@@ -10,9 +10,25 @@ public class Console : MonoBehaviour
     [SerializeField] Team t2;
     [SerializeField] Team t3;
     [SerializeField] Team t4;
+    [SerializeField] TextMeshProUGUI seasonNumber;
     public Team[] teams;
+    public Team[] teamsCopy;
+    public Team[] teamsCopy2;
+    public Team[] teamsCopy3;
     public TextMeshProUGUI[] standingsText;
+    public TextMeshProUGUI[] standingsTempText;
     int maps = 0;
+    int sNumber = 0;
+    [SerializeField] TextMeshProUGUI winner;
+    [SerializeField] TextMeshProUGUI runnerUp;
+    string firstP;
+    string secondP;
+    string firstP2;
+    string secondP2;
+    string firstP3;
+    string secondP3;
+    public bool postSeason;
+    public String winnerT;
 
     void Start()
     {
@@ -21,10 +37,73 @@ public class Console : MonoBehaviour
         teams[1] = t2;
         teams[2] = t3;
         teams[3] = t4;
+        teamsCopy = new Team[4];
+        teamsCopy[0] = t1;
+        teamsCopy[1] = t2;
+        teamsCopy[2] = t3;
+        teamsCopy[3] = t4;
+        teamsCopy2 = new Team[4];
+        teamsCopy2[0] = t1;
+        teamsCopy2[1] = t2;
+        teamsCopy2[2] = t3;
+        teamsCopy2[3] = t4;
+        teamsCopy3 = new Team[4];
+        teamsCopy3[0] = t1;
+        teamsCopy3[1] = t2;
+        teamsCopy3[2] = t3;
+        teamsCopy3[3] = t4;
+        firstP = "";
+        secondP = "";
+        firstP2 = "";
+        secondP2 = "";
+        firstP3 = "";
+        secondP3 = "";
+        seasonNumber.text = "Season: " + sNumber;
+        postSeason = false;
+        winnerT = "";
+        standingsTempText = standingsText;
+    }
+
+    void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            for (int i = 0; i < standingsText.Length && i < teamsCopy.Length; i++)
+            {
+                Team t = teamsCopy[i];
+                int rank = i + 1;
+                standingsText[i].text = $"{rank}. {t.brand}: {t.wins}W ({t.mapwins}/{t.maploss})";
+            }
+            winner.text = "Champions: " + firstP;
+            runnerUp.text = "Runner Ups: " + secondP;
+        }
+        else if(Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            for (int i = 0; i < standingsText.Length && i < teamsCopy2.Length; i++)
+            {
+                Team t = teamsCopy2[i];
+                int rank = i + 1;
+                standingsText[i].text = $"{rank}. {t.brand}: {t.wins2}W ({t.mapwins2}/{t.maploss2})";
+            }
+            winner.text = "Champions: " + firstP2;
+            runnerUp.text = "Runner Ups: " + secondP2;
+        }
+        else if(Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            for (int i = 0; i < standingsText.Length && i < teamsCopy3.Length; i++)
+            {
+                Team t = teamsCopy3[i];
+                int rank = i + 1;
+                standingsText[i].text = $"{rank}. {t.brand}: {t.wins3}W ({t.mapwins3}/{t.maploss3})";
+            }
+            winner.text = "Champions: " + firstP3;
+            runnerUp.text = "Runner Ups: " + secondP3;
+        }
     }
 
     public void tourney()
-    {
+    {   
+        sNumber++;
         for (int i = 0; i < teams.Length; i++)
         {
             for (int j = i + 1; j < teams.Length; j++)
@@ -34,28 +113,129 @@ public class Console : MonoBehaviour
                 match(teams[i], teams[j]);
             }
         }
+        postSeason = true;
+        bracket();
+        
+        seasonNumber.text = "Season: " + sNumber;
     }
 
     public void UpdateStandingsUI()
     {
-        System.Array.Sort(teams, (a, b) =>
+        
+        if(sNumber == 1)
         {
-            int winCompare = b.wins.CompareTo(a.wins);
-            if (winCompare != 0)
-                return winCompare;
+            System.Array.Sort(teamsCopy, (a, b) =>
+            {
+                int winCompare = b.wins.CompareTo(a.wins);
+                if (winCompare != 0)
+                    return winCompare;
 
-            int mapWinCompare = b.mapwins.CompareTo(a.mapwins);
-            if (mapWinCompare != 0)
-                return mapWinCompare;
+                int mapWinCompare = b.mapwins.CompareTo(a.mapwins);
+                if (mapWinCompare != 0)
+                    return mapWinCompare;
 
-            return a.maploss.CompareTo(b.maploss);
-        });
-
-        for (int i = 0; i < standingsText.Length && i < teams.Length; i++)
+                return a.maploss.CompareTo(b.maploss);
+            });
+            for (int i = 0; i < standingsText.Length && i < teamsCopy.Length; i++)
+            {
+                Team t = teamsCopy[i];
+                int rank = i + 1;
+                standingsText[i].text = $"{rank}. {t.brand}: {t.wins}W ({t.mapwins}/{t.maploss})";
+            }
+        }
+        else if(sNumber == 2)
         {
-            Team t = teams[i];
-            int rank = i + 1;
-            standingsText[i].text = $"{rank}. {t.brand}: {t.wins}W ({t.mapwins}/{t.maploss})";
+            System.Array.Sort(teamsCopy2, (a, b) =>
+            {
+                int winCompare = b.wins2.CompareTo(a.wins2);
+                if (winCompare != 0)
+                    return winCompare;
+
+                int mapWinCompare = b.mapwins2.CompareTo(a.mapwins2);
+                if (mapWinCompare != 0)
+                    return mapWinCompare;
+
+                return a.maploss2.CompareTo(b.maploss2);
+            });
+            for (int i = 0; i < standingsText.Length && i < teamsCopy2.Length; i++)
+            {
+                Team t = teamsCopy2[i];
+                int rank = i + 1;
+                standingsText[i].text = $"{rank}. {t.brand}: {t.wins2}W ({t.mapwins2}/{t.maploss2})";
+            }
+        }
+        else if(sNumber == 3)
+        {
+            System.Array.Sort(teamsCopy3, (a, b) =>
+            {
+                int winCompare = b.wins3.CompareTo(a.wins3);
+                if (winCompare != 0)
+                    return winCompare;
+
+                int mapWinCompare = b.mapwins3.CompareTo(a.mapwins3);
+                if (mapWinCompare != 0)
+                    return mapWinCompare;
+
+                return a.maploss3.CompareTo(b.maploss3);
+            });
+            for (int i = 0; i < standingsText.Length && i < teamsCopy3.Length; i++)
+            {
+                Team t = teamsCopy3[i];
+                int rank = i + 1;
+                standingsText[i].text = $"{rank}. {t.brand}: {t.wins3}W ({t.mapwins3}/{t.maploss3})";
+            }
+        }
+    }
+
+    public void bracket()
+    {
+        if(sNumber == 1)
+        {
+            Team t1 = match(teamsCopy[0],teamsCopy[3]);
+            Team t2 = match(teamsCopy[1],teamsCopy[2]);
+            winnerT = match(t1,t2).brand;
+            Debug.Log(winnerT);
+            firstP = winnerT;
+            if(winnerT == t1.brand)
+                secondP = t2.brand;
+            else
+                secondP = t1.brand;
+
+            winner.text = "Champions: " + firstP;
+            runnerUp.text = "Runner Ups: " + secondP;
+            postSeason = false;
+        }
+        else if(sNumber == 2)
+        {
+            Team t1 = match(teamsCopy[0],teamsCopy[3]);
+            Team t2 = match(teamsCopy[1],teamsCopy[2]);
+            winnerT = match(t1,t2).brand;
+            Debug.Log(winnerT);
+            firstP2 = winnerT;
+            if(winnerT == t1.brand)
+                secondP2 = t2.brand;
+            else
+                secondP2 = t1.brand;
+
+            winner.text = "Champions: " + firstP;
+            runnerUp.text = "Runner Ups: " + secondP2;
+            postSeason = false;
+        }
+        else if(sNumber == 3)
+        {
+            Team t1 = match(teamsCopy[0],teamsCopy[3]);
+            Team t2 = match(teamsCopy[1],teamsCopy[2]);
+            winnerT = match(t1,t2).brand;
+            Debug.Log(winnerT);
+            firstP3 = winnerT;
+            if(winnerT == t1.brand)
+                secondP3 = t2.brand;
+            else
+                secondP3 = t1.brand;
+
+            winner.text = "Champions: " + firstP3;
+            runnerUp.text = "Runner Ups: " + secondP3;
+            postSeason = false;
         }
     }
 
@@ -73,7 +253,7 @@ public class Console : MonoBehaviour
         return s1-1;
     }
 
-    public void match(Team o1, Team o2)
+    public Team match(Team o1, Team o2)
     {
         int mapWins1 = 0;
         int mapWins2 = 0;
@@ -92,16 +272,58 @@ public class Console : MonoBehaviour
         
             if (score1 > score2)
             {
-                mapWins1++;
-                o1.mapwins++;
-                o2.maploss++;
+                if(sNumber == 1)
+                {
+                    mapWins1++;
+                    if(!postSeason){
+                        o1.mapwins++;
+                        o2.maploss++;
+                    }
+                }
+                else if(sNumber == 2)
+                {
+                    mapWins1++;
+                    if(!postSeason){
+                        o1.mapwins2++;
+                        o2.maploss2++;
+                    }
+                }
+                else if(sNumber == 3)
+                {
+                    mapWins1++;
+                    if(!postSeason){
+                        o1.mapwins3++;
+                        o2.maploss3++;
+                    }
+                }
                 Debug.Log($"Map {map}: {o1.brand} wins ({score1}-{score2})");
             }
             else
             {
-                mapWins2++;
-                o2.mapwins++;
-                o1.maploss++;
+                if(sNumber == 1)
+                {
+                    mapWins2++;
+                    if(!postSeason){
+                        o2.mapwins++;
+                        o1.maploss++;
+                    }
+                }
+                else if(sNumber == 2)
+                {
+                    mapWins2++;
+                    if(!postSeason){
+                        o2.mapwins2++;
+                        o1.maploss2++;
+                    }
+                }
+                else if(sNumber == 3)
+                {
+                    mapWins2++;
+                    if(!postSeason){
+                        o2.mapwins3++;
+                        o1.maploss3++;
+                    }
+                }
                 Debug.Log($"Map {map}: {o2.brand} wins ({score2}-{score1})");
             }
 
@@ -109,17 +331,6 @@ public class Console : MonoBehaviour
                 break;
         }
 
-    
-        if (mapWins1 > mapWins2)
-        {
-            o1.wins++;
-            Debug.Log($"{o1.brand} wins the series {mapWins1}-{mapWins2}");
-        }
-        else
-        {
-            o2.wins++;
-            Debug.Log($"{o2.brand} wins the series {mapWins2}-{mapWins1}");
-        }
         UpdateStandingsUI();
         foreach(Player p in o1.players)
         {
@@ -129,6 +340,54 @@ public class Console : MonoBehaviour
         {
             p.ProcessMatchScores();
         }
+    
+        if (mapWins1 > mapWins2)
+        {
+            if(sNumber == 1)
+            {
+                if(!postSeason){
+                o1.wins++;
+                }
+            }
+            else if(sNumber == 2)
+            {
+                if(!postSeason){
+                o1.wins2++;
+                }
+            }
+            if(sNumber == 3)
+            {
+                if(!postSeason){
+                o1.wins3++;
+                }
+            }
+            Debug.Log($"{o1.brand} wins the series {mapWins1}-{mapWins2}");
+            return(o1);
+        }
+        else
+        {
+            if(sNumber == 1)
+            {
+                if(!postSeason){
+                o2.wins++;
+                }
+            }
+            else if(sNumber == 2)
+            {
+                if(!postSeason){
+                o2.wins2++;
+                }
+            }
+            if(sNumber == 3)
+            {
+                if(!postSeason){
+                o2.wins3++;
+                }
+            }
+            Debug.Log($"{o2.brand} wins the series {mapWins2}-{mapWins1}");
+            return(o2);
+        }
+        
     }
    
 
