@@ -207,8 +207,8 @@ public class Console : MonoBehaviour
         }
         else if(sNumber == 2)
         {
-            Team t1 = match(teamsCopy[0],teamsCopy[3]);
-            Team t2 = match(teamsCopy[1],teamsCopy[2]);
+            Team t1 = match(teamsCopy2[0],teamsCopy2[3]);
+            Team t2 = match(teamsCopy2[1],teamsCopy2[2]);
             winnerT = match(t1,t2).brand;
             Debug.Log(winnerT);
             firstP2 = winnerT;
@@ -223,8 +223,8 @@ public class Console : MonoBehaviour
         }
         else if(sNumber == 3)
         {
-            Team t1 = match(teamsCopy[0],teamsCopy[3]);
-            Team t2 = match(teamsCopy[1],teamsCopy[2]);
+            Team t1 = match(teamsCopy3[0],teamsCopy3[3]);
+            Team t2 = match(teamsCopy3[1],teamsCopy3[2]);
             winnerT = match(t1,t2).brand;
             Debug.Log(winnerT);
             firstP3 = winnerT;
