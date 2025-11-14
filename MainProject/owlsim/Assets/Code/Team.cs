@@ -34,6 +34,7 @@ public class Team : MonoBehaviour
 
     public void fillPlayers()
     {
+        players = new Player[12];
         players[0] = p1;
         players[1] = p2;
         players[2] = p3;
@@ -46,14 +47,24 @@ public class Team : MonoBehaviour
         players[9] = p10;
         players[10] = p11;
         players[11] = p12;
+        tanks = new Player[4];
+        dps = new Player[4];
+        supports = new Player[4];
+    }
+
+    public void setPlayer(int n, Player p)
+    {
+        players[n] = p;
+        Debug.Log(players[n].ign);
     }
 
     public void fillRoles()
     {
+        fillPlayers();
         Array.Clear(tanks, 0, tanks.Length);
         Array.Clear(dps, 0, dps.Length);
         Array.Clear(supports, 0, supports.Length);
-        fillPlayers();
+        
         int countT = 0;
         int countD = 0;
         int countS = 0;
@@ -74,6 +85,27 @@ public class Team : MonoBehaviour
             {
                 supports[countS] = players[i];
                 countS++;
+            }
+        }
+        for(int i = 0; i <= tanks.Length-1; i++)
+        {
+            if(tanks[i] == null)
+            {
+                tanks[i] = players[11];
+            }
+        }
+        for(int i = 0; i <= dps.Length-1; i++)
+        {
+            if(dps[i] == null)
+            {
+                dps[i] = players[11];
+            }
+        }
+        for(int i = 0; i <= supports.Length-1; i++)
+        {
+            if(supports[i] == null)
+            {
+                supports[i] = players[11];
             }
         }
     }
