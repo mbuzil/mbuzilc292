@@ -19,7 +19,10 @@ public class Campaign : MonoBehaviour
     [SerializeField] TextMeshProUGUI scouting2;
     [SerializeField] TextMeshProUGUI timerText;
     [SerializeField] TextMeshProUGUI teamSheet;
-
+    
+    int maps = 0;
+    public int sNumber = 0;
+    public bool postSeason;
 
     public Team[] teamList;
     public Team LunaticHai;
@@ -29,11 +32,21 @@ public class Campaign : MonoBehaviour
     public Team Envy;
     public Team Rogue;
 
-    public Team[] teamsCopy;
+    public Team NewYorkExcelsior;
+    public Team SanFranciscoShock;
+    public Team HoustonOutlaws;
+    public Team BostonUprising;
 
-    int maps = 0;
-    int sNumber = 0;
-    public bool postSeason;
+    public Team[] teamsCopy;
+    public Team[] teamsCopy2;
+    public Team[] teamsCopy3;
+    public Team[] teamsCopy4;
+    public Team[] teamsCopy5;
+    public Team[] teamsCopy6;
+    public Team[] teamsCopy7;
+    public Team[] teamsCopy8;
+
+    
 
     float timer = 0f;
     bool timing = false;
@@ -66,6 +79,18 @@ public class Campaign : MonoBehaviour
         Rogue = gameObject.AddComponent<Team>();
         Rogue.brand = "Rogue";
 
+        NewYorkExcelsior = gameObject.AddComponent<Team>();
+        NewYorkExcelsior.brand = "New York Excelsior";
+
+        SanFranciscoShock = gameObject.AddComponent<Team>();
+        SanFranciscoShock.brand = "San Francisco Shock";
+
+        HoustonOutlaws = gameObject.AddComponent<Team>();
+        HoustonOutlaws.brand = "Houston Outlaws";
+
+        BostonUprising = gameObject.AddComponent<Team>();
+        BostonUprising.brand = "Boston Uprising";
+
         teamList[0] = LunaticHai;
         teamList[1] = GCBusan;
         teamList[2] = KongdooPanthera;
@@ -81,6 +106,75 @@ public class Campaign : MonoBehaviour
         teamsCopy[3] = Cloud9;
         teamsCopy[4] = Envy;
         teamsCopy[5] = Rogue;
+
+        teamsCopy2[0] = LunaticHai;
+        teamsCopy2[1] = GCBusan;
+        teamsCopy2[2] = KongdooPanthera;
+        teamsCopy2[3] = Cloud9;
+        teamsCopy2[4] = Envy;
+        teamsCopy2[5] = Rogue;
+
+        teamsCopy3[0] = LunaticHai;
+        teamsCopy3[1] = GCBusan;
+        teamsCopy3[2] = KongdooPanthera;
+        teamsCopy3[3] = Cloud9;
+        teamsCopy3[4] = Envy;
+        teamsCopy3[5] = Rogue;
+
+        teamsCopy4[0] = LunaticHai;
+        teamsCopy4[1] = GCBusan;
+        teamsCopy4[2] = KongdooPanthera;
+        teamsCopy4[3] = Cloud9;
+        teamsCopy4[4] = Envy;
+        teamsCopy4[5] = Rogue;
+        teamsCopy4[6] = NewYorkExcelsior;
+        teamsCopy4[7] = SanFranciscoShock;
+        teamsCopy4[8] = HoustonOutlaws;
+        teamsCopy4[9] = BostonUprising;
+
+        teamsCopy5[0] = LunaticHai;
+        teamsCopy5[1] = GCBusan;
+        teamsCopy5[2] = KongdooPanthera;
+        teamsCopy5[3] = Cloud9;
+        teamsCopy5[4] = Envy;
+        teamsCopy5[5] = Rogue;
+        teamsCopy5[6] = NewYorkExcelsior;
+        teamsCopy5[7] = SanFranciscoShock;
+        teamsCopy5[8] = HoustonOutlaws;
+        teamsCopy5[9] = BostonUprising;
+
+        teamsCopy6[0] = LunaticHai;
+        teamsCopy6[1] = GCBusan;
+        teamsCopy6[2] = KongdooPanthera;
+        teamsCopy6[3] = Cloud9;
+        teamsCopy6[4] = Envy;
+        teamsCopy6[5] = Rogue;
+        teamsCopy6[6] = NewYorkExcelsior;
+        teamsCopy6[7] = SanFranciscoShock;
+        teamsCopy6[8] = HoustonOutlaws;
+        teamsCopy6[9] = BostonUprising;
+
+        teamsCopy7[0] = LunaticHai;
+        teamsCopy7[1] = GCBusan;
+        teamsCopy7[2] = KongdooPanthera;
+        teamsCopy7[3] = Cloud9;
+        teamsCopy7[4] = Envy;
+        teamsCopy7[5] = Rogue;
+        teamsCopy7[6] = NewYorkExcelsior;
+        teamsCopy7[7] = SanFranciscoShock;
+        teamsCopy7[8] = HoustonOutlaws;
+        teamsCopy7[9] = BostonUprising;
+
+        teamsCopy8[0] = LunaticHai;
+        teamsCopy8[1] = GCBusan;
+        teamsCopy8[2] = KongdooPanthera;
+        teamsCopy8[3] = Cloud9;
+        teamsCopy8[4] = Envy;
+        teamsCopy8[5] = Rogue;
+        teamsCopy8[6] = NewYorkExcelsior;
+        teamsCopy8[7] = SanFranciscoShock;
+        teamsCopy8[8] = HoustonOutlaws;
+        teamsCopy8[9] = BostonUprising;
 
         scouting.SetActive(false);
 
@@ -417,24 +511,64 @@ public class Campaign : MonoBehaviour
                 {
                     mapWins1++;
                     if(!postSeason){
-                        o1.mapwins++;
-                        o2.maploss++;
+                        o2.mapwins++;
+                        o1.maploss++;
                     }
                 }
                 else if(sNumber == 2)
                 {
                     mapWins1++;
                     if(!postSeason){
-                        o1.mapwins2++;
-                        o2.maploss2++;
+                        o2.mapwins2++;
+                        o1.maploss2++;
                     }
                 }
                 else if(sNumber == 3)
                 {
                     mapWins1++;
                     if(!postSeason){
-                        o1.mapwins3++;
-                        o2.maploss3++;
+                        o2.mapwins3++;
+                        o1.maploss3++;
+                    }
+                }
+                else if(sNumber == 4)
+                {
+                    mapWins1++;
+                    if(!postSeason){
+                        o2.mapwins4++;
+                        o1.maploss4++;
+                    }
+                }
+                else if(sNumber == 5)
+                {
+                    mapWins1++;
+                    if(!postSeason){
+                        o2.mapwins5++;
+                        o1.maploss5++;
+                    }
+                }
+                else if(sNumber == 6)
+                {
+                    mapWins1++;
+                    if(!postSeason){
+                        o2.mapwins6++;
+                        o1.maploss6++;
+                    }
+                }
+                else if(sNumber == 7)
+                {
+                    mapWins1++;
+                    if(!postSeason){
+                        o2.mapwins7++;
+                        o1.maploss7++;
+                    }
+                }
+                else if(sNumber == 8)
+                {
+                    mapWins1++;
+                    if(!postSeason){
+                        o2.mapwins8++;
+                        o1.maploss8++;
                     }
                 }
                 Debug.Log($"Map {map}: {o1.brand} wins ({score1}-{score2})");
@@ -463,6 +597,46 @@ public class Campaign : MonoBehaviour
                     if(!postSeason){
                         o2.mapwins3++;
                         o1.maploss3++;
+                    }
+                }
+                else if(sNumber == 4)
+                {
+                    mapWins2++;
+                    if(!postSeason){
+                        o2.mapwins4++;
+                        o1.maploss4++;
+                    }
+                }
+                else if(sNumber == 5)
+                {
+                    mapWins2++;
+                    if(!postSeason){
+                        o2.mapwins5++;
+                        o1.maploss5++;
+                    }
+                }
+                else if(sNumber == 6)
+                {
+                    mapWins2++;
+                    if(!postSeason){
+                        o2.mapwins6++;
+                        o1.maploss6++;
+                    }
+                }
+                else if(sNumber == 7)
+                {
+                    mapWins2++;
+                    if(!postSeason){
+                        o2.mapwins7++;
+                        o1.maploss7++;
+                    }
+                }
+                else if(sNumber == 8)
+                {
+                    mapWins2++;
+                    if(!postSeason){
+                        o2.mapwins8++;
+                        o1.maploss8++;
                     }
                 }
                 Debug.Log($"Map {map}: {o2.brand} wins ({score2}-{score1})");
@@ -496,10 +670,40 @@ public class Campaign : MonoBehaviour
                 o1.wins2++;
                 }
             }
-            if(sNumber == 3)
+            else if(sNumber == 3)
             {
                 if(!postSeason){
                 o1.wins3++;
+                }
+            }
+            else if(sNumber == 4)
+            {
+                if(!postSeason){
+                o1.wins4++;
+                }
+            }
+            else if(sNumber == 5)
+            {
+                if(!postSeason){
+                o1.wins5++;
+                }
+            }
+            else if(sNumber == 6)
+            {
+                if(!postSeason){
+                o1.wins6++;
+                }
+            }
+            else if(sNumber == 7)
+            {
+                if(!postSeason){
+                o1.wins7++;
+                }
+            }
+            else if(sNumber == 8)
+            {
+                if(!postSeason){
+                o1.wins8++;
                 }
             }
             
@@ -520,10 +724,40 @@ public class Campaign : MonoBehaviour
                 o2.wins2++;
                 }
             }
-            if(sNumber == 3)
+            else if(sNumber == 3)
             {
                 if(!postSeason){
                 o2.wins3++;
+                }
+            }
+            else if(sNumber == 4)
+            {
+                if(!postSeason){
+                o2.wins4++;
+                }
+            }
+            else if(sNumber == 5)
+            {
+                if(!postSeason){
+                o2.wins5++;
+                }
+            }
+            else if(sNumber == 6)
+            {
+                if(!postSeason){
+                o2.wins6++;
+                }
+            }
+            else if(sNumber == 7)
+            {
+                if(!postSeason){
+                o2.wins7++;
+                }
+            }
+            else if(sNumber == 8)
+            {
+                if(!postSeason){
+                o2.wins8++;
                 }
             }
             Debug.Log($"{o2.brand} wins the series {mapWins2}-{mapWins1}");
@@ -535,29 +769,107 @@ public class Campaign : MonoBehaviour
 
     public void UpdateStandingsUI()
     {
-        System.Array.Sort(teamsCopy, (a, b) =>
+        if(sNumber == 1)
         {
-            int winCompare = b.wins.CompareTo(a.wins);
-            if (winCompare != 0)
-                return winCompare;
+            System.Array.Sort(teamsCopy, (a, b) =>
+            {
+                int winCompare = b.wins.CompareTo(a.wins);
+                if (winCompare != 0)
+                    return winCompare;
 
-            int mapWinCompare = b.mapwins.CompareTo(a.mapwins);
-            if (mapWinCompare != 0)
-                return mapWinCompare;
+                int mapWinCompare = b.mapwins.CompareTo(a.mapwins);
+                if (mapWinCompare != 0)
+                    return mapWinCompare;
 
-            return a.maploss.CompareTo(b.maploss);
-        });
+                return a.maploss.CompareTo(b.maploss);
+            });
 
-        StringBuilder sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
 
-        for (int i = 0; i < teamsCopy.Length; i++)
-        {
-            Team t = teamsCopy[i];
-            int rank = i + 1;
-            sb.AppendLine($"{rank}. {t.brand}: {t.wins}W ({t.mapwins}/{t.maploss})");
+            for (int i = 0; i < teamsCopy.Length; i++)
+            {
+                Team t = teamsCopy[i];
+                int rank = i + 1;
+                sb.AppendLine($"{rank}. {t.brand}: {t.wins}W ({t.mapwins}/{t.maploss})");
+            }
+            standings.text = sb.ToString();
         }
 
-        standings.text = sb.ToString();
+        else if(sNumber == 2)
+        {
+            System.Array.Sort(teamsCopy2, (a, b) =>
+            {
+                int winCompare = b.wins2.CompareTo(a.wins2);
+                if (winCompare != 0)
+                    return winCompare;
+
+                int mapWinCompare = b.mapwins2.CompareTo(a.mapwins2);
+                if (mapWinCompare != 0)
+                    return mapWinCompare;
+
+                return a.maploss2.CompareTo(b.maploss2);
+            });
+
+            StringBuilder sb = new StringBuilder();
+
+            for (int i = 0; i < teamsCopy2.Length; i++)
+            {
+                Team t = teamsCopy2[i];
+                int rank = i + 1;
+                sb.AppendLine($"{rank}. {t.brand}: {t.wins2}W ({t.mapwins2}/{t.maploss2})");
+            }
+            standings.text = sb.ToString();
+        }
+        else if(sNumber == 3)
+        {
+            System.Array.Sort(teamsCopy3, (a, b) =>
+            {
+                int winCompare = b.wins3.CompareTo(a.wins3);
+                if (winCompare != 0)
+                    return winCompare;
+
+                int mapWinCompare = b.mapwins3.CompareTo(a.mapwins3);
+                if (mapWinCompare != 0)
+                    return mapWinCompare;
+
+                return a.maploss3.CompareTo(b.maploss3);
+            });
+
+            StringBuilder sb = new StringBuilder();
+
+            for (int i = 0; i < teamsCopy3.Length; i++)
+            {
+                Team t = teamsCopy3[i];
+                int rank = i + 1;
+                sb.AppendLine($"{rank}. {t.brand}: {t.wins3}W ({t.mapwins3}/{t.maploss3})");
+            }
+            standings.text = sb.ToString();
+        }
+        else if(sNumber == 4)
+        {
+            System.Array.Sort(teamsCopy4, (a, b) =>
+            {
+                int winCompare = b.wins4.CompareTo(a.wins4);
+                if (winCompare != 0)
+                    return winCompare;
+
+                int mapWinCompare = b.mapwins4.CompareTo(a.mapwins4);
+                if (mapWinCompare != 0)
+                    return mapWinCompare;
+
+                return a.maploss4.CompareTo(b.maploss4);
+            });
+
+            StringBuilder sb = new StringBuilder();
+
+            for (int i = 0; i < teamsCopy4.Length; i++)
+            {
+                Team t = teamsCopy4[i];
+                int rank = i + 1;
+                sb.AppendLine($"{rank}. {t.brand}: {t.wins4}W ({t.mapwins4}/{t.maploss4})");
+            }
+            standings.text = sb.ToString();
+        }
         }
 
     public int tie(int s1)
@@ -588,7 +900,7 @@ public class Campaign : MonoBehaviour
             }
         }
         postSeason = true;
-        //bracket();
+        bracket();
         
         //seasonNumber.text = "Season: " + sNumber;
 
@@ -671,7 +983,55 @@ public class Campaign : MonoBehaviour
         }
         
         timer = 6;
-        
+        NPCScouting();
+    }
+
+    public void AddPlayerNPC(Team t)
+    {
+        for(int i = 0; i < t.players.Length; i++)
+        {
+            if(t.players[i] == nullPlayer)
+            {
+                if(i == 7)
+                {
+                    t.setPlayer(i, currentPlayer);
+                    t.p8 = currentPlayer;
+                }
+                else if(i == 8)
+                {
+                    t.setPlayer(i, currentPlayer);
+                    t.p9 = currentPlayer;
+                }
+                else if(i == 9)
+                {
+                    t.setPlayer(i, currentPlayer);
+                    t.p10 = currentPlayer;
+                }
+                else if(i == 10)
+                {
+                    t.setPlayer(i, currentPlayer);
+                    t.p11 = currentPlayer;
+                }
+                else
+                {
+                    t.setPlayer(i, currentPlayer);
+                    t.p12 = currentPlayer;
+                }
+                break;
+            }
+            if(currentPlayer.role == "Tank")
+            {
+                tankPlayers.Remove(currentPlayer);
+            }
+            else if(currentPlayer.role == "DPS")
+            {
+                dpsPlayers.Remove(currentPlayer);
+            }
+            else
+            {
+                supportPlayers.Remove(currentPlayer);
+            }
+        }
     }
 
     public void showTeam()
@@ -699,10 +1059,169 @@ public class Campaign : MonoBehaviour
 
     public void bracket()
     {
+        String S1Winner = "";
+        String secondP1 = "";
+        String S2Winner = "";
+        String secondP2 = "";
+        String S3Winner = "";
+        String secondP3 = "";
+        String S4Winner = "";
+        String secondP4 = "";
+        String S5Winner = "";
+        String secondP5 = "";
+        String S6Winner = "";
+        String secondP6 = "";
+        String S7Winner = "";
+        String secondP7 = "";
+        String S8Winner = "";
+        String secondP8 = "";
+
+
+
+        if(sNumber == 1)
+        {
+            Team t1 = match(teamsCopy[0],teamsCopy[3]);
+            Team t2 = match(teamsCopy[1],teamsCopy[2]);
+            S1Winner = match(t1,t2).brand;
+            Debug.Log(S1Winner + "Has won Season 1");
+            if(S1Winner == t1.brand)
+                secondP1 = t2.brand;
+            else
+                secondP1 = t1.brand;
+
+            //winner.text = "Champions: " + firstP;
+            //runnerUp.text = "Runner Ups: " + secondP;
+            postSeason = false;
+        }
         
+        else if(sNumber == 2)
+        {
+            Team t1 = match(teamsCopy2[0],teamsCopy2[3]);
+            Team t2 = match(teamsCopy2[1],teamsCopy2[2]);
+            S2Winner = match(t1,t2).brand;
+            Debug.Log(S2Winner + "Has won Season 2");
+            if(S2Winner == t1.brand)
+                secondP2 = t2.brand;
+            else
+                secondP2 = t1.brand;
+
+            //winner.text = "Champions: " + firstP;
+            //runnerUp.text = "Runner Ups: " + secondP;
+            postSeason = false;
+        }
+        else if(sNumber == 3)
+        {
+            Team t1 = match(teamsCopy3[0],teamsCopy3[3]);
+            Team t2 = match(teamsCopy3[1],teamsCopy3[2]);
+            S3Winner = match(t1,t2).brand;
+            Debug.Log(S3Winner + "Has won Season 3");
+            if(S3Winner == t1.brand)
+                secondP3 = t2.brand;
+            else
+                secondP3 = t1.brand;
+
+            //winner.text = "Champions: " + firstP;
+            //runnerUp.text = "Runner Ups: " + secondP;
+            postSeason = false;
+        }
+
+        else if(sNumber == 4)
+        {
+            Team t1 = match(teamsCopy4[0],teamsCopy4[3]);
+            Team t2 = match(teamsCopy4[1],teamsCopy4[2]);
+            S4Winner = match(t1,t2).brand;
+            Debug.Log(S3Winner + "Has won OWL Season 1");
+            if(S4Winner == t1.brand)
+                secondP4 = t2.brand;
+            else
+                secondP4 = t1.brand;
+
+            //winner.text = "Champions: " + firstP;
+            //runnerUp.text = "Runner Ups: " + secondP;
+            postSeason = false;
+        }
+
+        else if(sNumber == 5)
+        {
+            Team t1 = match(teamsCopy5[0],teamsCopy5[3]);
+            Team t2 = match(teamsCopy5[1],teamsCopy5[2]);
+            S5Winner = match(t1,t2).brand;
+            Debug.Log(S3Winner + "Has won OWL Season 2");
+            if(S5Winner == t1.brand)
+                secondP5 = t2.brand;
+            else
+                secondP5 = t1.brand;
+
+            //winner.text = "Champions: " + firstP;
+            //runnerUp.text = "Runner Ups: " + secondP;
+            postSeason = false;
+        }
+
+        else if(sNumber == 6)
+        {
+            Team t1 = match(teamsCopy6[0],teamsCopy6[3]);
+            Team t2 = match(teamsCopy6[1],teamsCopy6[2]);
+            S6Winner = match(t1,t2).brand;
+            Debug.Log(S6Winner + "Has won OWL Season 3");
+            if(S6Winner == t1.brand)
+                secondP6 = t2.brand;
+            else
+                secondP6 = t1.brand;
+
+            //winner.text = "Champions: " + firstP;
+            //runnerUp.text = "Runner Ups: " + secondP;
+            postSeason = false;
+        }
+
+        else if(sNumber == 7)
+        {
+            Team t1 = match(teamsCopy7[0],teamsCopy7[3]);
+            Team t2 = match(teamsCopy7[1],teamsCopy7[2]);
+            S7Winner = match(t1,t2).brand;
+            Debug.Log(S7Winner + "Has won OWL Season 4");
+            if(S7Winner == t1.brand)
+                secondP7 = t2.brand;
+            else
+                secondP7 = t1.brand;
+
+            //winner.text = "Champions: " + firstP;
+            //runnerUp.text = "Runner Ups: " + secondP;
+            postSeason = false;
+        }
+
+        else if(sNumber == 8)
+        {
+            Team t1 = match(teamsCopy8[0],teamsCopy8[3]);
+            Team t2 = match(teamsCopy8[1],teamsCopy8[2]);
+            S8Winner = match(t1,t2).brand;
+            Debug.Log(S8Winner + "Has won OWL Season 5");
+            if(S8Winner == t1.brand)
+                secondP8 = t2.brand;
+            else
+                secondP8 = t1.brand;
+
+            //winner.text = "Champions: " + firstP;
+            //runnerUp.text = "Runner Ups: " + secondP;
+            postSeason = false;
+        }
     }
 
-
+    public void NPCScouting()
+    {
+        for(int i = 1; i < teamList.Length; i++)
+        {
+            if(teamList[i].p12 != nullPlayer)
+                break;
+            int pnum = (int)Random.Range(0, 3);
+            if(pnum == 0)
+                ScoutingTank();
+            else if(pnum == 1)
+                ScoutingDPS();
+            else
+                ScoutingSupport();
+            AddPlayerNPC(teamList[i]);
+        }
+    }
 
 
 

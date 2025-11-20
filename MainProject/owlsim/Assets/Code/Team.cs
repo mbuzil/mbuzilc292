@@ -27,6 +27,21 @@ public class Team : MonoBehaviour
     public int wins3;
     public int mapwins3;
     public int maploss3;
+    public int wins4;
+    public int mapwins4;
+    public int maploss4;
+    public int wins5;
+    public int mapwins5;
+    public int maploss5;
+    public int wins6;
+    public int mapwins6;
+    public int maploss6;
+    public int wins7;
+    public int mapwins7;
+    public int maploss7;
+    public int wins8;
+    public int mapwins8;
+    public int maploss8;
     public Player[] tanks;
     public Player[] dps;
     public Player[] supports;
@@ -47,9 +62,9 @@ public class Team : MonoBehaviour
         players[9] = p10;
         players[10] = p11;
         players[11] = p12;
-        tanks = new Player[4];
-        dps = new Player[4];
-        supports = new Player[4];
+        tanks = new Player[8];
+        dps = new Player[8];
+        supports = new Player[8];
     }
 
     public void setPlayer(int n, Player p)

@@ -9,6 +9,8 @@ public class Butts : MonoBehaviour
     [SerializeField] GameObject cs;
     [SerializeField] GameObject standings;
 
+
+
     public void Press()
     {
         cs.GetComponent<Console>().test();
@@ -26,4 +28,6 @@ public class Butts : MonoBehaviour
         else
             standings.SetActive(true);
     }
+
+   
 }
