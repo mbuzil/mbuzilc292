@@ -275,11 +275,6 @@ public class Campaign : MonoBehaviour
             NextPlayer();
         }
 
-        if(playerCount >= 9)
-        {
-            drafting = false;
-            Franchising.SetActive(false);
-        }
         if(pSelect.role == "Tank")
         {
             for(int i = 0; i < tanksPlayer.Count; i++)
@@ -304,6 +299,12 @@ public class Campaign : MonoBehaviour
                     supportPlayers.Remove(supportPlayers[i]);
             }
         }
+        if(playerCount >= 9)
+        {
+            drafting = false;
+            Franchising.SetActive(false);
+            fillTeams();
+        }
     }
 
     public void SkipPlayer()
@@ -323,7 +324,6 @@ public class Campaign : MonoBehaviour
 
     public void NextPlayer()
     {
-        Debug.Log($"There are {LunaticHai.tanks.Length} Tanks, {LunaticHai.dps.Length} dps, and {LunaticHai.supports.Length} supports");
         LunaticHai.fillRoles();
         int r = 0;
         if(LunaticHai.getTankCount() < 3)
@@ -348,6 +348,8 @@ public class Campaign : MonoBehaviour
 
         int rand = 0;
         int rand2 = 0;
+        if(sNumber < 2)
+        {
         for(int i = 0; i < teamList.Length; i++)
         {
             if (tankPlayers.Count < 2 || dpsPlayers.Count < 2 || supportPlayers.Count < 2)
@@ -419,10 +421,126 @@ public class Campaign : MonoBehaviour
             teamList[i].p10 = nullPlayer;
             teamList[i].p11 = nullPlayer;
             teamList[i].p12 = nullPlayer;
-            
-
-
         }
+        }
+        else
+        {
+            for(int i = 1; i < teamsCopy4.Length; i++)
+        {
+            if (tankPlayers.Count < 2 || dpsPlayers.Count < 2 || supportPlayers.Count < 2)
+            {
+                return;
+            }
+
+            rand = (int)Random.Range(0, tankPlayers.Count);
+
+            Player tank1 = tankPlayers[rand];
+            teamsCopy4[i].p1 = tank1;
+            tankPlayers.Remove(tankPlayers[rand]);
+
+            rand = (int)Random.Range(0, tankPlayers.Count);
+
+            Player tank2 = tankPlayers[Random.Range(0,tankPlayers.Count)];
+            teamsCopy4[i].p2 = tank2;
+            tankPlayers.Remove(tankPlayers[rand]);
+
+
+            rand = (int)Random.Range(0, dpsPlayers.Count);
+
+            Player dps1 = dpsPlayers[rand];
+            teamsCopy4[i].p3 = dps1;
+            dpsPlayers.Remove(dpsPlayers[rand]);
+
+            rand = (int)Random.Range(0, dpsPlayers.Count);
+
+            Player dps2 = dpsPlayers[Random.Range(0,dpsPlayers.Count)];
+            teamsCopy4[i].p4 = dps2;
+            dpsPlayers.Remove(dpsPlayers[rand]);
+
+
+            rand = (int)Random.Range(0, supportPlayers.Count);
+
+            Player support1 = supportPlayers[rand];
+            teamsCopy4[i].p5 = support1;
+            supportPlayers.Remove(supportPlayers[rand]);
+
+            rand = (int)Random.Range(0, supportPlayers.Count);
+
+            Player support2 = supportPlayers[Random.Range(0,supportPlayers.Count)];
+            teamsCopy4[i].p6 = support2;
+            supportPlayers.Remove(supportPlayers[rand]);
+
+            rand = (int)Random.Range(1,4);
+            if(rand == 1){
+                rand2 = Random.Range(0, tankPlayers.Count);
+                Player sub = tankPlayers[rand2];
+                teamsCopy4[i].p7 = sub;
+                tankPlayers.Remove(tankPlayers[rand2]);
+            }
+            else if(rand == 2)
+            {
+                rand2 = Random.Range(0, dpsPlayers.Count);
+                Player sub = dpsPlayers[rand2];
+                teamsCopy4[i].p7 = sub;
+                dpsPlayers.Remove(dpsPlayers[rand2]);
+            }
+            else
+            {
+                rand2 = Random.Range(0, supportPlayers.Count);
+                Player sub = supportPlayers[rand2];
+                teamsCopy4[i].p7 = sub;
+                supportPlayers.Remove(supportPlayers[rand2]);
+            }
+
+            rand = (int)Random.Range(1,4);
+            if(rand == 1){
+                rand2 = Random.Range(0, tankPlayers.Count);
+                Player sub = tankPlayers[rand2];
+                teamsCopy4[i].p8 = sub;
+                tankPlayers.Remove(tankPlayers[rand2]);
+            }
+            else if(rand == 2)
+            {
+                rand2 = Random.Range(0, dpsPlayers.Count);
+                Player sub = dpsPlayers[rand2];
+                teamsCopy4[i].p8 = sub;
+                dpsPlayers.Remove(dpsPlayers[rand2]);
+            }
+            else
+            {
+                rand2 = Random.Range(0, supportPlayers.Count);
+                Player sub = supportPlayers[rand2];
+                teamsCopy4[i].p8 = sub;
+                supportPlayers.Remove(supportPlayers[rand2]);
+            }
+
+            rand = (int)Random.Range(1,4);
+            if(rand == 1){
+                rand2 = Random.Range(0, tankPlayers.Count);
+                Player sub = tankPlayers[rand2];
+                teamsCopy4[i].p9 = sub;
+                tankPlayers.Remove(tankPlayers[rand2]);
+            }
+            else if(rand == 2)
+            {
+                rand2 = Random.Range(0, dpsPlayers.Count);
+                Player sub = dpsPlayers[rand2];
+                teamsCopy4[i].p9 = sub;
+                dpsPlayers.Remove(dpsPlayers[rand2]);
+            }
+            else
+            {
+                rand2 = Random.Range(0, supportPlayers.Count);
+                Player sub = supportPlayers[rand2];
+                teamsCopy4[i].p9 = sub;
+                supportPlayers.Remove(supportPlayers[rand2]);
+            }
+            teamsCopy4[i].p10 = nullPlayer;
+            teamsCopy4[i].p11 = nullPlayer;
+            teamsCopy4[i].p12 = nullPlayer;
+        }
+        }
+
     }
 
     public int getScore(Player p, int currentMap)
