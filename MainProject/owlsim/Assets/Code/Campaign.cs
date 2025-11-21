@@ -19,10 +19,19 @@ public class Campaign : MonoBehaviour
     [SerializeField] TextMeshProUGUI scouting2;
     [SerializeField] TextMeshProUGUI timerText;
     [SerializeField] TextMeshProUGUI teamSheet;
+
+    [SerializeField] GameObject Franchising;
+    [SerializeField] TextMeshProUGUI Welcome;
+    [SerializeField] TextMeshProUGUI draftPlayer;
     
     int maps = 0;
     public int sNumber = 0;
     public bool postSeason;
+    public bool drafting;
+    public int keepnums = 0;
+    public int playerCount = 0;
+    public List<Player> ogPlayers = new List<Player>();
+    public bool ogs = true;
 
     public Team[] teamList;
     public Team LunaticHai;
@@ -177,6 +186,7 @@ public class Campaign : MonoBehaviour
         teamsCopy8[9] = BostonUprising;
 
         scouting.SetActive(false);
+        Franchising.SetActive(false);
 
         teamSheet.text = teamSheetText;
     }
@@ -193,6 +203,143 @@ public class Campaign : MonoBehaviour
                 timer = 0;
                 scouting.SetActive(false);
             }
+        }
+
+        if(drafting)
+        {
+            if(ogs)
+                draftPlayer.text = $"Name: {ogPlayers[keepnums].ign}\nSkill: {ogPlayers[keepnums].skill+ogPlayers[keepnums].effectiveSkill}\nTotalScore: {ogPlayers[keepnums].seasonScore}";
+            else
+                draftPlayer.text = $"Name: {currentPlayer.ign}\nSkill: {currentPlayer.skill+currentPlayer.effectiveSkill}\nTotalScore: {currentPlayer.seasonScore}";
+        }
+    }
+
+    public void AcceptPlayer()
+    {
+        Player pSelect = null;
+        if(ogs)
+            pSelect = ogPlayers[keepnums];
+        else
+        {
+            pSelect = currentPlayer;
+        }
+        LunaticHai.players[playerCount] = pSelect;
+        LunaticHai.setPlayer(playerCount, LunaticHai.players[playerCount]);
+        if(playerCount == 0)
+        {
+            LunaticHai.p1 = pSelect;
+        }
+        else if(playerCount == 1)
+        {
+            LunaticHai.p2 = pSelect;
+        }
+        else if(playerCount == 2)
+        {
+            LunaticHai.p3 = pSelect;
+        }
+        else if(playerCount == 3)
+        {
+            LunaticHai.p4 = pSelect;
+        }
+        else if(playerCount == 4)
+        {
+            LunaticHai.p5 = pSelect;
+        }
+        else if(playerCount == 5)
+        {
+            LunaticHai.p6 = pSelect;
+        }
+        else if(playerCount == 6)
+        {
+            LunaticHai.p7 = pSelect;
+        }
+        else if(playerCount == 7)
+        {
+            LunaticHai.p8 = pSelect;
+        }
+        else if(playerCount == 8)
+        {
+            LunaticHai.p9 = pSelect;
+        }
+        keepnums++;
+        playerCount++;
+        LunaticHai.fillRoles();
+
+        if(!ogs)
+            NextPlayer();
+
+        if(keepnums >= ogPlayers.Count)
+        {
+            ogs = false;
+            Welcome.text = "Welcome to the OWL Draft";
+            NextPlayer();
+        }
+
+        if(playerCount >= 9)
+        {
+            drafting = false;
+            Franchising.SetActive(false);
+        }
+        if(pSelect.role == "Tank")
+        {
+            for(int i = 0; i < tanksPlayer.Count; i++)
+            {
+                if(tanksPlayer[i].ign == pSelect.ign)
+                    tanksPlayer.Remove(tanksPlayer[i]);
+            }
+        }
+        else if(pSelect.role == "DPS")
+        {
+            for(int i = 0; i < dpsPlayers.Count; i++)
+            {
+                if(dpsPlayers[i].ign == pSelect.ign)
+                    dpsPlayers.Remove(dpsPlayers[i]);
+            }
+        }
+        else
+        {
+            for(int i = 0; i < supportPlayers.Count; i++)
+            {
+                if(supportPlayers[i].ign == pSelect.ign)
+                    supportPlayers.Remove(supportPlayers[i]);
+            }
+        }
+    }
+
+    public void SkipPlayer()
+    {
+        if(ogs)
+        {
+            keepnums++;
+            if(ogPlayers.Count == keepnums)
+            {
+                ogs = false;
+                Welcome.text = "Welcome to the OWL Draft";
+            }
+        }
+        else
+            NextPlayer();
+    }
+
+    public void NextPlayer()
+    {
+        Debug.Log($"There are {LunaticHai.tanks.Length} Tanks, {LunaticHai.dps.Length} dps, and {LunaticHai.supports.Length} supports");
+        LunaticHai.fillRoles();
+        int r = 0;
+        if(LunaticHai.getTankCount() < 3)
+        {
+            r = Random.Range(0, tanksPlayer.Count-1);
+            currentPlayer = tanksPlayer[r];
+        }
+        else if(LunaticHai.getDPSCount() < 3)
+        {
+            r = Random.Range(0, dpsPlayers.Count-1);
+            currentPlayer = dpsPlayers[r];
+        }
+        else
+        {
+            r = Random.Range(0, supportPlayers.Count-1);
+            currentPlayer = supportPlayers[r];
         }
     }
 
@@ -1123,6 +1270,7 @@ public class Campaign : MonoBehaviour
             //winner.text = "Champions: " + firstP;
             //runnerUp.text = "Runner Ups: " + secondP;
             postSeason = false;
+            Franchise();
         }
 
         else if(sNumber == 4)
@@ -1223,7 +1371,73 @@ public class Campaign : MonoBehaviour
         }
     }
 
+    public void ClearTeam(Team t)
+    {
+        for(int i = 0; i < 12; i++)
+        {
+            if(t.players[i] != nullPlayer)
+            {
+                if(t.players[i].role == "Tank")
+                {
+                    tanksPlayer.Add(t.players[i]);
+                }
+                else if(t.players[i].role == "Support")
+                {
+                    supportPlayers.Add(t.players[i]);
+                }
+                else
+                {
+                    dpsPlayers.Add(t.players[i]);
+                }
+                t.players[i] = nullPlayer;
+                t.setPlayer(i, nullPlayer);
+                Debug.Log(t.players[i]);
+            }
+        }
+        t.p1 = nullPlayer;
+        t.p2 = nullPlayer;
+        t.p3 = nullPlayer;
+        t.p4 = nullPlayer;
+        t.p5 = nullPlayer;
+        t.p6 = nullPlayer;
+        t.p7 = nullPlayer;
+        t.p8 = nullPlayer;
+        t.p9 = nullPlayer;
+        t.p10 = nullPlayer;
+        t.p11 = nullPlayer;
+        t.p12 = nullPlayer;
+    }
 
+    public void Franchise()
+    {
+        for(int i = 1; i < teamList.Length; i++)
+        {
+            ClearTeam(teamList[i]);
+        }
 
-
+        for(int i = 0; i < 12; i++)
+        {
+            if(LunaticHai.players[i] != nullPlayer)
+            {
+                ogPlayers.Add(LunaticHai.players[i]);
+                LunaticHai.players[i] = nullPlayer;
+                LunaticHai.setPlayer(i, nullPlayer);
+            }
+        }
+        LunaticHai.p1 = nullPlayer;
+        LunaticHai.p2 = nullPlayer;
+        LunaticHai.p3 = nullPlayer;
+        LunaticHai.p4 = nullPlayer;
+        LunaticHai.p5 = nullPlayer;
+        LunaticHai.p6 = nullPlayer;
+        LunaticHai.p7 = nullPlayer;
+        LunaticHai.p8 = nullPlayer;
+        LunaticHai.p9 = nullPlayer;
+        LunaticHai.p10 = nullPlayer;
+        LunaticHai.p11 = nullPlayer;
+        LunaticHai.p12 = nullPlayer;
+        Franchising.SetActive(true);
+        Welcome.text = "Who do you want to resign?";
+        drafting = true;
+    }
 }

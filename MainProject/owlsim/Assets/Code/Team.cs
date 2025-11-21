@@ -70,7 +70,39 @@ public class Team : MonoBehaviour
     public void setPlayer(int n, Player p)
     {
         players[n] = p;
-        Debug.Log(players[n].ign);
+    }
+
+    public int getTankCount()
+    {
+        int count = 0;
+        for(int i = 0; i < tanks.Length; i++)
+        {
+            if(tanks[i].ign != "NULL")
+                count++;
+        }
+        return count;
+    }
+
+    public int getDPSCount()
+    {
+        int count = 0;
+        for(int i = 0; i < dps.Length; i++)
+        {
+            if(dps[i].ign != "NULL")
+                count++;
+        }
+        return count;
+    }
+
+    public int getSupportCount()
+    {
+        int count = 0;
+        for(int i = 0; i < supports.Length; i++)
+        {
+            if(supports[i].ign != "NULL")
+                count++;
+        }
+        return count;
     }
 
     public void fillRoles()
