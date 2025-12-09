@@ -72,6 +72,11 @@ public class Team : MonoBehaviour
         players[n] = p;
     }
 
+    public void setBrand(string s)
+    {
+        brand = s;
+    }
+
     public int getTankCount()
     {
         int count = 0;

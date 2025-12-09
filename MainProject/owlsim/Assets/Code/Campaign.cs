@@ -34,6 +34,7 @@ public class Campaign : MonoBehaviour
     public bool ogs = true;
 
     public Team[] teamList;
+    public Team[] teamList2;
     public Team LunaticHai;
     public Team GCBusan;
     public Team KongdooPanthera;
@@ -54,6 +55,10 @@ public class Campaign : MonoBehaviour
     public Team[] teamsCopy6;
     public Team[] teamsCopy7;
     public Team[] teamsCopy8;
+
+    [SerializeField] GameObject tankEmblem;
+    [SerializeField] GameObject supportEmblem;
+    [SerializeField] GameObject dpsEmblem;
 
     
 
@@ -106,6 +111,17 @@ public class Campaign : MonoBehaviour
         teamList[3] = Cloud9;
         teamList[4] = Envy;
         teamList[5] = Rogue;
+
+        teamList2[0] = LunaticHai;
+        teamList2[1] = GCBusan;
+        teamList2[2] = KongdooPanthera;
+        teamList2[3] = Cloud9;
+        teamList2[4] = Envy;
+        teamList2[5] = Rogue;
+        teamList2[6] = NewYorkExcelsior;
+        teamList2[7] = SanFranciscoShock;
+        teamList2[8] = HoustonOutlaws;
+        teamList2[9] = BostonUprising;
 
         tankPlayers = tanksPlayer;
 
@@ -189,6 +205,7 @@ public class Campaign : MonoBehaviour
         Franchising.SetActive(false);
 
         teamSheet.text = teamSheetText;
+        fillTeams();
     }
     
     void Update()
@@ -302,8 +319,17 @@ public class Campaign : MonoBehaviour
         if(playerCount >= 9)
         {
             drafting = false;
+            supportEmblem.SetActive(false);
             Franchising.SetActive(false);
             fillTeams();
+
+            LunaticHai.setBrand("Seoul Dynasty");
+            GCBusan.setBrand("Florida Mayhem");
+            KongdooPanthera.setBrand("Las Angeles Gladiators");
+            Cloud9.setBrand("London Spitfire");
+            Envy.setBrand("Dallas Fuel");
+            Rogue.setBrand("Las Angeles Valiant");
+
         }
     }
 
@@ -330,16 +356,22 @@ public class Campaign : MonoBehaviour
         {
             r = Random.Range(0, tanksPlayer.Count-1);
             currentPlayer = tanksPlayer[r];
+            tankEmblem.SetActive(true);
         }
         else if(LunaticHai.getDPSCount() < 3)
         {
             r = Random.Range(0, dpsPlayers.Count-1);
             currentPlayer = dpsPlayers[r];
+            tankEmblem.SetActive(false);
+            dpsEmblem.SetActive(true);
         }
         else
         {
             r = Random.Range(0, supportPlayers.Count-1);
             currentPlayer = supportPlayers[r];
+            tankEmblem.SetActive(false);
+            dpsEmblem.SetActive(false);
+            supportEmblem.SetActive(true);
         }
     }
 
@@ -539,8 +571,12 @@ public class Campaign : MonoBehaviour
             teamsCopy4[i].p11 = nullPlayer;
             teamsCopy4[i].p12 = nullPlayer;
         }
+        for(int i = 0; i < teamsCopy4.Length; i++)
+        {
+            teamsCopy4[i].fillRoles();
         }
-
+        }
+        
     }
 
     public int getScore(Player p, int currentMap)
@@ -1147,14 +1183,16 @@ public class Campaign : MonoBehaviour
     }
 
 
-        public void pressButt()
-        {
+    public void pressButt()
+    {
             match(GCBusan, LunaticHai);
-        }
+    }
 
-        public void tourney()
+    public void tourney()
     {   
         sNumber++;
+        if(sNumber <= 3)
+        {
         for (int i = 0; i < teamList.Length; i++)
         {
             for (int j = i + 1; j < teamList.Length; j++)
@@ -1163,6 +1201,19 @@ public class Campaign : MonoBehaviour
                     continue;
                 match(teamList[i], teamList[j]);
             }
+        }
+        }
+        else
+        {
+            for (int i = 0; i < teamList2.Length; i++)
+        {
+            for (int j = i + 1; j < teamList2.Length; j++)
+            {
+                if (i == j)
+                    continue;
+                match(teamList2[i], teamList2[j]);
+            }
+        }
         }
         postSeason = true;
         bracket();
@@ -1555,7 +1606,7 @@ public class Campaign : MonoBehaviour
         LunaticHai.p11 = nullPlayer;
         LunaticHai.p12 = nullPlayer;
         Franchising.SetActive(true);
-        Welcome.text = "Who do you want to resign?";
+        Welcome.text = "Who do you want to re-sign?";
         drafting = true;
     }
 }
