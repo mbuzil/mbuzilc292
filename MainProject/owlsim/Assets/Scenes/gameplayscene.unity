@@ -177,6 +177,7 @@ MonoBehaviour:
   seasonScore: 0
   role: Tank
   effectiveSkill: 0
+  age: 0
 --- !u!1 &28413805
 GameObject:
   m_ObjectHideFlags: 0
@@ -221,46 +222,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6dbcefc4c423ce49b47e6ac3eb3ab5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tankPlayers:
-  - {fileID: 639894802}
-  - {fileID: 371339157}
-  - {fileID: 979571297}
-  - {fileID: 1867672294}
-  - {fileID: 1677743756}
-  - {fileID: 1764470041}
-  - {fileID: 2126850286}
-  - {fileID: 407652064}
-  - {fileID: 981605694}
-  - {fileID: 7239928}
-  - {fileID: 1508316850}
-  - {fileID: 470671417}
-  - {fileID: 308136560}
-  - {fileID: 457318014}
-  - {fileID: 121334676}
-  - {fileID: 1639462616}
-  - {fileID: 1457256871}
-  - {fileID: 2080595167}
-  - {fileID: 1511893285}
-  - {fileID: 610020450}
-  - {fileID: 167564836}
-  - {fileID: 1607413487}
-  - {fileID: 466402914}
-  - {fileID: 1635356303}
-  - {fileID: 1943316020}
-  - {fileID: 1449284768}
-  - {fileID: 1226210097}
-  - {fileID: 947214680}
-  - {fileID: 1376707491}
-  - {fileID: 1040461294}
-  - {fileID: 329377933}
-  - {fileID: 836384057}
-  - {fileID: 1493787538}
-  - {fileID: 119298812}
-  - {fileID: 1552875624}
-  - {fileID: 260896498}
-  - {fileID: 530066045}
-  - {fileID: 1509959942}
-  tanksPlayer:
+  realTankPlayers:
   - {fileID: 639894804}
   - {fileID: 371339159}
   - {fileID: 979571299}
@@ -277,6 +239,7 @@ MonoBehaviour:
   - {fileID: 457318016}
   - {fileID: 121334678}
   - {fileID: 1639462618}
+  - {fileID: 1457256873}
   - {fileID: 329377935}
   - {fileID: 2080595169}
   - {fileID: 1511893287}
@@ -290,7 +253,6 @@ MonoBehaviour:
   - {fileID: 1226210099}
   - {fileID: 947214682}
   - {fileID: 1376707493}
-  - {fileID: 1457256873}
   - {fileID: 1040461296}
   - {fileID: 836384057}
   - {fileID: 1493787538}
@@ -375,6 +337,9 @@ MonoBehaviour:
   - {fileID: 404660837}
   - {fileID: 1055490585}
   - {fileID: 1273906291}
+  tankCopy: []
+  dpsCopy: []
+  supportCopy: []
   nullPlayer: {fileID: 2091602325}
   standings: {fileID: 812762995}
   ScoutButton: {fileID: 744884947}
@@ -554,6 +519,7 @@ MonoBehaviour:
   seasonScore: 0
   role: Support
   effectiveSkill: 0
+  age: 0
 --- !u!1 &46285320
 GameObject:
   m_ObjectHideFlags: 0
@@ -608,6 +574,7 @@ MonoBehaviour:
   seasonScore: 0
   role: DPS
   effectiveSkill: 0
+  age: 0
 --- !u!1 &59952862
 GameObject:
   m_ObjectHideFlags: 0
@@ -662,6 +629,7 @@ MonoBehaviour:
   seasonScore: 0
   role: DPS
   effectiveSkill: 0
+  age: 0
 --- !u!1 &60932336
 GameObject:
   m_ObjectHideFlags: 0
@@ -716,6 +684,7 @@ MonoBehaviour:
   seasonScore: 0
   role: DPS
   effectiveSkill: 0
+  age: 0
 --- !u!1 &71960610
 GameObject:
   m_ObjectHideFlags: 0
@@ -810,6 +779,7 @@ MonoBehaviour:
   seasonScore: 0
   role: DPS
   effectiveSkill: 0
+  age: 0
 --- !u!1 &84296110
 GameObject:
   m_ObjectHideFlags: 0
@@ -1073,6 +1043,7 @@ MonoBehaviour:
   seasonScore: 0
   role: Tank
   effectiveSkill: 0
+  age: 0
 --- !u!1 &120532939
 GameObject:
   m_ObjectHideFlags: 0
@@ -1127,6 +1098,7 @@ MonoBehaviour:
   seasonScore: 0
   role: DPS
   effectiveSkill: 0
+  age: 0
 --- !u!1 &121334676
 GameObject:
   m_ObjectHideFlags: 0
@@ -1181,6 +1153,7 @@ MonoBehaviour:
   seasonScore: 0
   role: Tank
   effectiveSkill: 0
+  age: 0
 --- !u!1 &123567847
 GameObject:
   m_ObjectHideFlags: 0
@@ -1369,6 +1342,7 @@ MonoBehaviour:
   seasonScore: 0
   role: Tank
   effectiveSkill: 0
+  age: 0
 --- !u!1 &172813181
 GameObject:
   m_ObjectHideFlags: 0
@@ -1557,6 +1531,7 @@ MonoBehaviour:
   seasonScore: 0
   role: Support
   effectiveSkill: 0
+  age: 0
 --- !u!1 &231629859
 GameObject:
   m_ObjectHideFlags: 0
@@ -1679,6 +1654,7 @@ MonoBehaviour:
   seasonScore: 0
   role: Tank
   effectiveSkill: 0
+  age: 0
 --- !u!1 &278418577
 GameObject:
   m_ObjectHideFlags: 0
@@ -1867,6 +1843,7 @@ MonoBehaviour:
   seasonScore: 0
   role: Support
   effectiveSkill: 0
+  age: 0
 --- !u!1 &292708693
 GameObject:
   m_ObjectHideFlags: 0
@@ -2055,6 +2032,7 @@ MonoBehaviour:
   seasonScore: 0
   role: Tank
   effectiveSkill: 0
+  age: 0
 --- !u!1 &313806923
 GameObject:
   m_ObjectHideFlags: 0
@@ -2109,6 +2087,7 @@ MonoBehaviour:
   seasonScore: 0
   role: Support
   effectiveSkill: 0
+  age: 0
 --- !u!1 &329377933
 GameObject:
   m_ObjectHideFlags: 0
@@ -2163,6 +2142,7 @@ MonoBehaviour:
   seasonScore: 0
   role: Tank
   effectiveSkill: 0
+  age: 0
 --- !u!1 &334306222
 GameObject:
   m_ObjectHideFlags: 0
@@ -2560,6 +2540,7 @@ MonoBehaviour:
   seasonScore: 0
   role: Tank
   effectiveSkill: 0
+  age: 0
 --- !u!1 &402924528
 GameObject:
   m_ObjectHideFlags: 0
@@ -2748,6 +2729,7 @@ MonoBehaviour:
   seasonScore: 0
   role: Support
   effectiveSkill: 0
+  age: 0
 --- !u!1 &407652064
 GameObject:
   m_ObjectHideFlags: 0
@@ -2802,6 +2784,7 @@ MonoBehaviour:
   seasonScore: 0
   role: Tank
   effectiveSkill: 0
+  age: 0
 --- !u!1 &412293146
 GameObject:
   m_ObjectHideFlags: 0
@@ -2856,6 +2839,7 @@ MonoBehaviour:
   seasonScore: 0
   role: Support
   effectiveSkill: 0
+  age: 0
 --- !u!1 &440656262
 GameObject:
   m_ObjectHideFlags: 0
@@ -2910,6 +2894,7 @@ MonoBehaviour:
   seasonScore: 0
   role: Support
   effectiveSkill: 0
+  age: 0
 --- !u!1 &452886835
 GameObject:
   m_ObjectHideFlags: 0
@@ -3098,6 +3083,7 @@ MonoBehaviour:
   seasonScore: 0
   role: Tank
   effectiveSkill: 0
+  age: 0
 --- !u!1 &466402914
 GameObject:
   m_ObjectHideFlags: 0
@@ -3152,6 +3138,7 @@ MonoBehaviour:
   seasonScore: 0
   role: Tank
   effectiveSkill: 0
+  age: 0
 --- !u!1 &470671417
 GameObject:
   m_ObjectHideFlags: 0
@@ -3206,6 +3193,7 @@ MonoBehaviour:
   seasonScore: 0
   role: Tank
   effectiveSkill: 0
+  age: 0
 --- !u!1 &503970972
 GameObject:
   m_ObjectHideFlags: 0
@@ -3260,6 +3248,7 @@ MonoBehaviour:
   seasonScore: 0
   role: Support
   effectiveSkill: 0
+  age: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -3406,6 +3395,7 @@ MonoBehaviour:
   seasonScore: 0
   role: Tank
   effectiveSkill: 0
+  age: 0
 --- !u!1 &533632533
 GameObject:
   m_ObjectHideFlags: 0
@@ -3576,6 +3566,7 @@ MonoBehaviour:
   seasonScore: 0
   role: DPS
   effectiveSkill: 0
+  age: 0
 --- !u!1 &549530472
 GameObject:
   m_ObjectHideFlags: 0
@@ -3630,6 +3621,7 @@ MonoBehaviour:
   seasonScore: 0
   role: DPS
   effectiveSkill: 0
+  age: 0
 --- !u!1 &550859139
 GameObject:
   m_ObjectHideFlags: 0
@@ -3684,6 +3676,7 @@ MonoBehaviour:
   seasonScore: 0
   role: DPS
   effectiveSkill: 0
+  age: 0
 --- !u!1 &569585333
 GameObject:
   m_ObjectHideFlags: 0
@@ -3738,6 +3731,7 @@ MonoBehaviour:
   seasonScore: 0
   role: Support
   effectiveSkill: 0
+  age: 0
 --- !u!1 &604688404
 GameObject:
   m_ObjectHideFlags: 0
@@ -3926,6 +3920,7 @@ MonoBehaviour:
   seasonScore: 0
   role: Support
   effectiveSkill: 0
+  age: 0
 --- !u!1 &610020450
 GameObject:
   m_ObjectHideFlags: 0
@@ -3980,6 +3975,7 @@ MonoBehaviour:
   seasonScore: 0
   role: Tank
   effectiveSkill: 0
+  age: 0
 --- !u!1 &623205766
 GameObject:
   m_ObjectHideFlags: 0
@@ -4034,6 +4030,7 @@ MonoBehaviour:
   seasonScore: 0
   role: DPS
   effectiveSkill: 0
+  age: 0
 --- !u!1 &626649355
 GameObject:
   m_ObjectHideFlags: 0
@@ -4088,6 +4085,7 @@ MonoBehaviour:
   seasonScore: 0
   role: DPS
   effectiveSkill: 0
+  age: 0
 --- !u!1 &639894802
 GameObject:
   m_ObjectHideFlags: 0
@@ -4142,6 +4140,7 @@ MonoBehaviour:
   seasonScore: 0
   role: Tank
   effectiveSkill: 0
+  age: 0
 --- !u!1 &640344930
 GameObject:
   m_ObjectHideFlags: 0
@@ -4196,6 +4195,7 @@ MonoBehaviour:
   seasonScore: 0
   role: Support
   effectiveSkill: 0
+  age: 0
 --- !u!1 &644783039
 GameObject:
   m_ObjectHideFlags: 0
@@ -4704,6 +4704,7 @@ MonoBehaviour:
   seasonScore: 0
   role: Support
   effectiveSkill: 0
+  age: 0
 --- !u!1 &747186915
 GameObject:
   m_ObjectHideFlags: 0
@@ -4892,6 +4893,7 @@ MonoBehaviour:
   seasonScore: 0
   role: Support
   effectiveSkill: 0
+  age: 0
 --- !u!1 &763674701
 GameObject:
   m_ObjectHideFlags: 0
@@ -4946,6 +4948,7 @@ MonoBehaviour:
   seasonScore: 0
   role: DPS
   effectiveSkill: 0
+  age: 0
 --- !u!1 &780427145
 GameObject:
   m_ObjectHideFlags: 0
@@ -5268,6 +5271,7 @@ MonoBehaviour:
   seasonScore: 0
   role: DPS
   effectiveSkill: 0
+  age: 0
 --- !u!1 &812762994
 GameObject:
   m_ObjectHideFlags: 0
@@ -5306,7 +5310,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Standings
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5333,7 +5337,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 55.4
+  m_fontSize: 20
   m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -5369,7 +5373,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0.3864441, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -5399,8 +5403,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -360.44, y: 73}
-  m_SizeDelta: {x: 302.8, y: 61.9454}
+  m_AnchoredPosition: {x: -361.79257, y: 64.56705}
+  m_SizeDelta: {x: 297.0033, y: 78.811}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &832438693
 GameObject:
@@ -5456,6 +5460,7 @@ MonoBehaviour:
   seasonScore: 0
   role: Support
   effectiveSkill: 0
+  age: 0
 --- !u!1 &836384055
 GameObject:
   m_ObjectHideFlags: 0
@@ -5510,6 +5515,7 @@ MonoBehaviour:
   seasonScore: 0
   role: Tank
   effectiveSkill: 0
+  age: 0
 --- !u!1 &877164942
 GameObject:
   m_ObjectHideFlags: 0
@@ -5564,6 +5570,7 @@ MonoBehaviour:
   seasonScore: 0
   role: Support
   effectiveSkill: 0
+  age: 0
 --- !u!1 &879890203
 GameObject:
   m_ObjectHideFlags: 0
@@ -5618,6 +5625,7 @@ MonoBehaviour:
   seasonScore: 0
   role: DPS
   effectiveSkill: 0
+  age: 0
 --- !u!1 &890978210
 GameObject:
   m_ObjectHideFlags: 0
@@ -5672,6 +5680,7 @@ MonoBehaviour:
   seasonScore: 0
   role: DPS
   effectiveSkill: 0
+  age: 0
 --- !u!1 &899636834
 GameObject:
   m_ObjectHideFlags: 0
@@ -5726,6 +5735,7 @@ MonoBehaviour:
   seasonScore: 0
   role: Support
   effectiveSkill: 0
+  age: 0
 --- !u!1 &914408809
 GameObject:
   m_ObjectHideFlags: 0
@@ -5780,6 +5790,7 @@ MonoBehaviour:
   seasonScore: 0
   role: DPS
   effectiveSkill: 0
+  age: 0
 --- !u!1 &918838629
 GameObject:
   m_ObjectHideFlags: 0
@@ -5834,6 +5845,7 @@ MonoBehaviour:
   seasonScore: 0
   role: Support
   effectiveSkill: 0
+  age: 0
 --- !u!1 &941355590
 GameObject:
   m_ObjectHideFlags: 0
@@ -5955,6 +5967,7 @@ MonoBehaviour:
   seasonScore: 0
   role: Tank
   effectiveSkill: 0
+  age: 0
 --- !u!1 &951426284
 GameObject:
   m_ObjectHideFlags: 0
@@ -6143,6 +6156,7 @@ MonoBehaviour:
   seasonScore: 0
   role: Tank
   effectiveSkill: 0
+  age: 0
 --- !u!1 &981605694
 GameObject:
   m_ObjectHideFlags: 0
@@ -6197,6 +6211,7 @@ MonoBehaviour:
   seasonScore: 0
   role: Tank
   effectiveSkill: 0
+  age: 0
 --- !u!1 &998676020
 GameObject:
   m_ObjectHideFlags: 0
@@ -6517,6 +6532,7 @@ MonoBehaviour:
   seasonScore: 0
   role: DPS
   effectiveSkill: 0
+  age: 0
 --- !u!1 &1040461294
 GameObject:
   m_ObjectHideFlags: 0
@@ -6571,6 +6587,7 @@ MonoBehaviour:
   seasonScore: 0
   role: Tank
   effectiveSkill: 0
+  age: 0
 --- !u!1 &1041630853
 GameObject:
   m_ObjectHideFlags: 0
@@ -6625,6 +6642,7 @@ MonoBehaviour:
   seasonScore: 0
   role: DPS
   effectiveSkill: 0
+  age: 0
 --- !u!1 &1045344984
 GameObject:
   m_ObjectHideFlags: 0
@@ -6679,6 +6697,7 @@ MonoBehaviour:
   seasonScore: 0
   role: DPS
   effectiveSkill: 0
+  age: 0
 --- !u!1 &1047351918
 GameObject:
   m_ObjectHideFlags: 0
@@ -6866,6 +6885,7 @@ MonoBehaviour:
   seasonScore: 0
   role: Support
   effectiveSkill: 0
+  age: 0
 --- !u!1 &1082452170
 GameObject:
   m_ObjectHideFlags: 0
@@ -6920,6 +6940,7 @@ MonoBehaviour:
   seasonScore: 0
   role: Support
   effectiveSkill: 0
+  age: 0
 --- !u!1 &1095216406
 GameObject:
   m_ObjectHideFlags: 0
@@ -7108,6 +7129,7 @@ MonoBehaviour:
   seasonScore: 0
   role: DPS
   effectiveSkill: 0
+  age: 0
 --- !u!1 &1171160717
 GameObject:
   m_ObjectHideFlags: 0
@@ -7162,6 +7184,7 @@ MonoBehaviour:
   seasonScore: 0
   role: Support
   effectiveSkill: 0
+  age: 0
 --- !u!1 &1177011567
 GameObject:
   m_ObjectHideFlags: 0
@@ -7216,6 +7239,7 @@ MonoBehaviour:
   seasonScore: 0
   role: Support
   effectiveSkill: 0
+  age: 0
 --- !u!1 &1182631330
 GameObject:
   m_ObjectHideFlags: 0
@@ -7270,6 +7294,7 @@ MonoBehaviour:
   seasonScore: 0
   role: DPS
   effectiveSkill: 0
+  age: 0
 --- !u!1 &1184808504
 GameObject:
   m_ObjectHideFlags: 0
@@ -7324,6 +7349,7 @@ MonoBehaviour:
   seasonScore: 0
   role: Support
   effectiveSkill: 0
+  age: 0
 --- !u!1 &1200921596
 GameObject:
   m_ObjectHideFlags: 0
@@ -7378,6 +7404,7 @@ MonoBehaviour:
   seasonScore: 0
   role: Support
   effectiveSkill: 0
+  age: 0
 --- !u!1 &1211102469
 GameObject:
   m_ObjectHideFlags: 0
@@ -7432,6 +7459,7 @@ MonoBehaviour:
   seasonScore: 0
   role: DPS
   effectiveSkill: 0
+  age: 0
 --- !u!1 &1222006451
 GameObject:
   m_ObjectHideFlags: 0
@@ -7619,6 +7647,7 @@ MonoBehaviour:
   seasonScore: 0
   role: Tank
   effectiveSkill: 0
+  age: 0
 --- !u!1 &1228554759
 GameObject:
   m_ObjectHideFlags: 0
@@ -7673,6 +7702,7 @@ MonoBehaviour:
   seasonScore: 0
   role: Support
   effectiveSkill: 0
+  age: 0
 --- !u!1 &1228614022
 GameObject:
   m_ObjectHideFlags: 0
@@ -7727,6 +7757,7 @@ MonoBehaviour:
   seasonScore: 0
   role: DPS
   effectiveSkill: 0
+  age: 0
 --- !u!1 &1273906289
 GameObject:
   m_ObjectHideFlags: 0
@@ -7781,6 +7812,7 @@ MonoBehaviour:
   seasonScore: 0
   role: Support
   effectiveSkill: 0
+  age: 0
 --- !u!1 &1285667186
 GameObject:
   m_ObjectHideFlags: 0
@@ -7835,6 +7867,7 @@ MonoBehaviour:
   seasonScore: 0
   role: DPS
   effectiveSkill: 0
+  age: 0
 --- !u!1 &1287341291
 GameObject:
   m_ObjectHideFlags: 0
@@ -8023,6 +8056,7 @@ MonoBehaviour:
   seasonScore: 0
   role: Support
   effectiveSkill: 0
+  age: 0
 --- !u!1 &1322716120
 GameObject:
   m_ObjectHideFlags: 0
@@ -8211,6 +8245,7 @@ MonoBehaviour:
   seasonScore: 0
   role: DPS
   effectiveSkill: 0
+  age: 0
 --- !u!1 &1376707491
 GameObject:
   m_ObjectHideFlags: 0
@@ -8265,6 +8300,7 @@ MonoBehaviour:
   seasonScore: 0
   role: Tank
   effectiveSkill: 0
+  age: 0
 --- !u!1 &1396894410
 GameObject:
   m_ObjectHideFlags: 0
@@ -8394,6 +8430,7 @@ MonoBehaviour:
   seasonScore: 0
   role: Support
   effectiveSkill: 0
+  age: 0
 --- !u!1 &1449284768
 GameObject:
   m_ObjectHideFlags: 0
@@ -8448,6 +8485,7 @@ MonoBehaviour:
   seasonScore: 0
   role: Tank
   effectiveSkill: 0
+  age: 0
 --- !u!1 &1457256871
 GameObject:
   m_ObjectHideFlags: 0
@@ -8502,6 +8540,7 @@ MonoBehaviour:
   seasonScore: 0
   role: Tank
   effectiveSkill: 0
+  age: 0
 --- !u!1 &1462015368
 GameObject:
   m_ObjectHideFlags: 0
@@ -8631,6 +8670,7 @@ MonoBehaviour:
   seasonScore: 0
   role: DPS
   effectiveSkill: 0
+  age: 0
 --- !u!1 &1493787536
 GameObject:
   m_ObjectHideFlags: 0
@@ -8685,6 +8725,7 @@ MonoBehaviour:
   seasonScore: 0
   role: Tank
   effectiveSkill: 0
+  age: 0
 --- !u!1 &1508316850
 GameObject:
   m_ObjectHideFlags: 0
@@ -8739,6 +8780,7 @@ MonoBehaviour:
   seasonScore: 0
   role: Tank
   effectiveSkill: 0
+  age: 0
 --- !u!1 &1509959940
 GameObject:
   m_ObjectHideFlags: 0
@@ -8793,6 +8835,7 @@ MonoBehaviour:
   seasonScore: 0
   role: Tank
   effectiveSkill: 0
+  age: 0
 --- !u!1 &1511893285
 GameObject:
   m_ObjectHideFlags: 0
@@ -8847,6 +8890,7 @@ MonoBehaviour:
   seasonScore: 0
   role: Tank
   effectiveSkill: 0
+  age: 0
 --- !u!1 &1516164558
 GameObject:
   m_ObjectHideFlags: 0
@@ -9034,6 +9078,7 @@ MonoBehaviour:
   seasonScore: 0
   role: DPS
   effectiveSkill: 0
+  age: 0
 --- !u!1 &1552875622
 GameObject:
   m_ObjectHideFlags: 0
@@ -9088,6 +9133,7 @@ MonoBehaviour:
   seasonScore: 0
   role: Tank
   effectiveSkill: 0
+  age: 0
 --- !u!1 &1567828006
 GameObject:
   m_ObjectHideFlags: 0
@@ -9177,6 +9223,7 @@ MonoBehaviour:
   seasonScore: 0
   role: DPS
   effectiveSkill: 0
+  age: 0
 --- !u!1 &1607413487
 GameObject:
   m_ObjectHideFlags: 0
@@ -9231,6 +9278,7 @@ MonoBehaviour:
   seasonScore: 0
   role: Tank
   effectiveSkill: 0
+  age: 0
 --- !u!1 &1630918352
 GameObject:
   m_ObjectHideFlags: 0
@@ -9419,6 +9467,7 @@ MonoBehaviour:
   seasonScore: 0
   role: Tank
   effectiveSkill: 0
+  age: 0
 --- !u!1 &1639462616
 GameObject:
   m_ObjectHideFlags: 0
@@ -9473,6 +9522,7 @@ MonoBehaviour:
   seasonScore: 0
   role: Tank
   effectiveSkill: 0
+  age: 0
 --- !u!1 &1650042379
 GameObject:
   m_ObjectHideFlags: 0
@@ -9527,6 +9577,7 @@ MonoBehaviour:
   seasonScore: 0
   role: DPS
   effectiveSkill: 0
+  age: 0
 --- !u!1 &1658140983
 GameObject:
   m_ObjectHideFlags: 0
@@ -9581,6 +9632,7 @@ MonoBehaviour:
   seasonScore: 0
   role: DPS
   effectiveSkill: 0
+  age: 0
 --- !u!1 &1663031676
 GameObject:
   m_ObjectHideFlags: 0
@@ -9689,6 +9741,7 @@ MonoBehaviour:
   seasonScore: 0
   role: Support
   effectiveSkill: 0
+  age: 0
 --- !u!4 &1674935039
 Transform:
   m_ObjectHideFlags: 0
@@ -9758,6 +9811,7 @@ MonoBehaviour:
   seasonScore: 0
   role: Tank
   effectiveSkill: 0
+  age: 0
 --- !u!1 &1703428450
 GameObject:
   m_ObjectHideFlags: 0
@@ -9812,6 +9866,7 @@ MonoBehaviour:
   seasonScore: 0
   role: Support
   effectiveSkill: 0
+  age: 0
 --- !u!1 &1720556879
 GameObject:
   m_ObjectHideFlags: 0
@@ -9866,6 +9921,7 @@ MonoBehaviour:
   seasonScore: 0
   role: DPS
   effectiveSkill: 0
+  age: 0
 --- !u!1 &1741669019
 GameObject:
   m_ObjectHideFlags: 0
@@ -10129,6 +10185,7 @@ MonoBehaviour:
   seasonScore: 0
   role: Tank
   effectiveSkill: 0
+  age: 0
 --- !u!1 &1772879636
 GameObject:
   m_ObjectHideFlags: 0
@@ -10297,6 +10354,7 @@ MonoBehaviour:
   seasonScore: 0
   role: DPS
   effectiveSkill: 0
+  age: 0
 --- !u!1 &1825493758
 GameObject:
   m_ObjectHideFlags: 0
@@ -10351,6 +10409,7 @@ MonoBehaviour:
   seasonScore: 0
   role: DPS
   effectiveSkill: 0
+  age: 0
 --- !u!1 &1834217590
 GameObject:
   m_ObjectHideFlags: 0
@@ -10405,6 +10464,7 @@ MonoBehaviour:
   seasonScore: 0
   role: Support
   effectiveSkill: 0
+  age: 0
 --- !u!1 &1837654887
 GameObject:
   m_ObjectHideFlags: 0
@@ -10727,6 +10787,7 @@ MonoBehaviour:
   seasonScore: 0
   role: DPS
   effectiveSkill: 0
+  age: 0
 --- !u!1 &1867672294
 GameObject:
   m_ObjectHideFlags: 0
@@ -10781,6 +10842,7 @@ MonoBehaviour:
   seasonScore: 0
   role: Tank
   effectiveSkill: 0
+  age: 0
 --- !u!1 &1874843280
 GameObject:
   m_ObjectHideFlags: 0
@@ -10835,6 +10897,7 @@ MonoBehaviour:
   seasonScore: 0
   role: DPS
   effectiveSkill: 0
+  age: 0
 --- !u!1 &1889363020
 GameObject:
   m_ObjectHideFlags: 0
@@ -10926,6 +10989,7 @@ MonoBehaviour:
   seasonScore: 0
   role: DPS
   effectiveSkill: 0
+  age: 0
 --- !u!1 &1902805118
 GameObject:
   m_ObjectHideFlags: 0
@@ -11049,6 +11113,7 @@ MonoBehaviour:
   seasonScore: 0
   role: DPS
   effectiveSkill: 0
+  age: 0
 --- !u!1 &1931248752
 GameObject:
   m_ObjectHideFlags: 0
@@ -11237,6 +11302,7 @@ MonoBehaviour:
   seasonScore: 0
   role: Tank
   effectiveSkill: 0
+  age: 0
 --- !u!1 &1950956108
 GameObject:
   m_ObjectHideFlags: 0
@@ -11693,6 +11759,7 @@ MonoBehaviour:
   seasonScore: 0
   role: DPS
   effectiveSkill: 0
+  age: 0
 --- !u!1 &1969778126
 GameObject:
   m_ObjectHideFlags: 0
@@ -11747,6 +11814,7 @@ MonoBehaviour:
   seasonScore: 0
   role: Support
   effectiveSkill: 0
+  age: 0
 --- !u!1 &1981764337
 GameObject:
   m_ObjectHideFlags: 0
@@ -11934,6 +12002,7 @@ MonoBehaviour:
   seasonScore: 0
   role: Support
   effectiveSkill: 0
+  age: 0
 --- !u!1 &2021187283
 GameObject:
   m_ObjectHideFlags: 0
@@ -12070,6 +12139,7 @@ MonoBehaviour:
   seasonScore: 0
   role: Support
   effectiveSkill: 0
+  age: 0
 --- !u!1 &2052006807
 GameObject:
   m_ObjectHideFlags: 0
@@ -12124,6 +12194,7 @@ MonoBehaviour:
   seasonScore: 0
   role: Support
   effectiveSkill: 0
+  age: 0
 --- !u!1 &2061916774
 GameObject:
   m_ObjectHideFlags: 0
@@ -12178,6 +12249,7 @@ MonoBehaviour:
   seasonScore: 0
   role: Support
   effectiveSkill: 0
+  age: 0
 --- !u!1 &2071942595
 GameObject:
   m_ObjectHideFlags: 0
@@ -12232,6 +12304,7 @@ MonoBehaviour:
   seasonScore: 0
   role: DPS
   effectiveSkill: 0
+  age: 0
 --- !u!1 &2080595167
 GameObject:
   m_ObjectHideFlags: 0
@@ -12286,6 +12359,7 @@ MonoBehaviour:
   seasonScore: 0
   role: Tank
   effectiveSkill: 0
+  age: 0
 --- !u!1 &2091602324
 GameObject:
   m_ObjectHideFlags: 0
@@ -12325,6 +12399,7 @@ MonoBehaviour:
   seasonScore: 0
   role: NA
   effectiveSkill: 0
+  age: 0
 --- !u!4 &2091602326
 Transform:
   m_ObjectHideFlags: 0
@@ -12651,6 +12726,7 @@ MonoBehaviour:
   seasonScore: 0
   role: Tank
   effectiveSkill: 0
+  age: 0
 --- !u!1 &2134270330
 GameObject:
   m_ObjectHideFlags: 0
@@ -12705,6 +12781,7 @@ MonoBehaviour:
   seasonScore: 0
   role: Support
   effectiveSkill: 0
+  age: 0
 --- !u!1 &2141311631
 GameObject:
   m_ObjectHideFlags: 0

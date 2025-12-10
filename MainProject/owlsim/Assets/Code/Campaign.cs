@@ -8,10 +8,13 @@ using System.Text;
 
 public class Campaign : MonoBehaviour
 {
-    public List<Player> tankPlayers = new List<Player>();
-    public List<Player> tanksPlayer = new List<Player>();
+    public List<Player> realTankPlayers = new List<Player>();
     public List<Player> dpsPlayers = new List<Player>();
     public List<Player> supportPlayers = new List<Player>();
+
+    public List<Player> tankCopy = new List<Player>();
+    public List<Player> dpsCopy = new List<Player>();
+    public List<Player> supportCopy = new List<Player>();
 
     [SerializeField] Player nullPlayer;
     [SerializeField] TextMeshProUGUI standings;
@@ -71,11 +74,24 @@ public class Campaign : MonoBehaviour
     bool teamShown = true;
     String teamSheetText = "";
     
-
+    
 
 
     void Start()
     {
+
+        for(int i = 0; i < realTankPlayers.Count; i++)
+        {
+            tankCopy.Add(realTankPlayers[i]);
+        }
+        for(int i = 0; i < dpsPlayers.Count; i++)
+        {
+            dpsCopy.Add(dpsPlayers[i]);
+        }
+        for(int i = 0; i < supportPlayers.Count; i++)
+        {
+            supportCopy.Add(supportPlayers[i]);
+        }
         
         LunaticHai = gameObject.AddComponent<Team>();
         LunaticHai.brand = "Lunatic Hai";
@@ -124,8 +140,6 @@ public class Campaign : MonoBehaviour
         teamList2[7] = SanFranciscoShock;
         teamList2[8] = HoustonOutlaws;
         teamList2[9] = BostonUprising;
-
-        tankPlayers = tanksPlayer;
 
         teamsCopy[0] = LunaticHai;
         teamsCopy[1] = GCBusan;
@@ -298,10 +312,10 @@ public class Campaign : MonoBehaviour
 
         if(pSelect.role == "Tank")
         {
-            for(int i = 0; i < tanksPlayer.Count; i++)
+            for(int i = 0; i < realTankPlayers.Count; i++)
             {
-                if(tanksPlayer[i].ign == pSelect.ign)
-                    tanksPlayer.Remove(tanksPlayer[i]);
+                if(realTankPlayers[i].ign == pSelect.ign)
+                    realTankPlayers.Remove(realTankPlayers[i]);
             }
         }
         else if(pSelect.role == "DPS")
@@ -358,8 +372,8 @@ public class Campaign : MonoBehaviour
         int r = 0;
         if(LunaticHai.getTankCount() < 3)
         {
-            r = Random.Range(0, tanksPlayer.Count-1);
-            currentPlayer = tanksPlayer[r];
+            r = Random.Range(0, realTankPlayers.Count-1);
+            currentPlayer = realTankPlayers[r];
             tankEmblem.SetActive(true);
         }
         else if(LunaticHai.getDPSCount() < 3)
@@ -381,29 +395,28 @@ public class Campaign : MonoBehaviour
 
     public void fillTeams()
     {
-
         int rand = 0;
         int rand2 = 0;
         if(sNumber < 2)
         {
         for(int i = 0; i < teamList.Length; i++)
         {
-            if (tankPlayers.Count < 2 || dpsPlayers.Count < 2 || supportPlayers.Count < 2)
+            if (realTankPlayers.Count < 2 || dpsPlayers.Count < 2 || supportPlayers.Count < 2)
             {
                 return;
             }
 
-            rand = (int)Random.Range(0, tankPlayers.Count);
+            rand = (int)Random.Range(0, realTankPlayers.Count);
 
-            Player tank1 = tankPlayers[rand];
+            Player tank1 = realTankPlayers[rand];
             teamList[i].p1 = tank1;
-            tankPlayers.Remove(tankPlayers[rand]);
+            realTankPlayers.Remove(realTankPlayers[rand]);
 
-            rand = (int)Random.Range(0, tankPlayers.Count);
+            rand = (int)Random.Range(0, realTankPlayers.Count);
 
-            Player tank2 = tankPlayers[Random.Range(0,tankPlayers.Count)];
+            Player tank2 = realTankPlayers[Random.Range(0,realTankPlayers.Count)];
             teamList[i].p2 = tank2;
-            tankPlayers.Remove(tankPlayers[rand]);
+            realTankPlayers.Remove(realTankPlayers[rand]);
 
 
             rand = (int)Random.Range(0, dpsPlayers.Count);
@@ -433,10 +446,10 @@ public class Campaign : MonoBehaviour
 
             rand = (int)Random.Range(1,4);
             if(rand == 1){
-                rand2 = Random.Range(0, tankPlayers.Count);
-                Player sub = tankPlayers[rand2];
+                rand2 = Random.Range(0, realTankPlayers.Count);
+                Player sub = realTankPlayers[rand2];
                 teamList[i].p7 = sub;
-                tankPlayers.Remove(tankPlayers[rand2]);
+                realTankPlayers.Remove(realTankPlayers[rand2]);
             }
             else if(rand == 2)
             {
@@ -463,22 +476,21 @@ public class Campaign : MonoBehaviour
         {
             for(int i = 1; i < teamsCopy4.Length; i++)
         {
-            if (tankPlayers.Count < 2 || dpsPlayers.Count < 2 || supportPlayers.Count < 2)
+            if (realTankPlayers.Count < 2 || dpsPlayers.Count < 2 || supportPlayers.Count < 2)
             {
                 return;
             }
+            rand = (int)Random.Range(0, realTankPlayers.Count);
 
-            rand = (int)Random.Range(0, tankPlayers.Count);
-
-            Player tank1 = tankPlayers[rand];
+            Player tank1 = realTankPlayers[rand];
             teamsCopy4[i].p1 = tank1;
-            tankPlayers.Remove(tankPlayers[rand]);
+            realTankPlayers.Remove(realTankPlayers[rand]);
 
-            rand = (int)Random.Range(0, tankPlayers.Count);
+            rand = (int)Random.Range(0, realTankPlayers.Count);
 
-            Player tank2 = tankPlayers[Random.Range(0,tankPlayers.Count)];
+            Player tank2 = realTankPlayers[Random.Range(0,realTankPlayers.Count)];
             teamsCopy4[i].p2 = tank2;
-            tankPlayers.Remove(tankPlayers[rand]);
+            realTankPlayers.Remove(realTankPlayers[rand]);
 
 
             rand = (int)Random.Range(0, dpsPlayers.Count);
@@ -508,10 +520,10 @@ public class Campaign : MonoBehaviour
 
             rand = (int)Random.Range(1,4);
             if(rand == 1){
-                rand2 = Random.Range(0, tankPlayers.Count);
-                Player sub = tankPlayers[rand2];
+                rand2 = Random.Range(0, realTankPlayers.Count);
+                Player sub = realTankPlayers[rand2];
                 teamsCopy4[i].p7 = sub;
-                tankPlayers.Remove(tankPlayers[rand2]);
+                realTankPlayers.Remove(realTankPlayers[rand2]);
             }
             else if(rand == 2)
             {
@@ -530,10 +542,10 @@ public class Campaign : MonoBehaviour
 
             rand = (int)Random.Range(1,4);
             if(rand == 1){
-                rand2 = Random.Range(0, tankPlayers.Count);
-                Player sub = tankPlayers[rand2];
+                rand2 = Random.Range(0, realTankPlayers.Count);
+                Player sub = realTankPlayers[rand2];
                 teamsCopy4[i].p8 = sub;
-                tankPlayers.Remove(tankPlayers[rand2]);
+                realTankPlayers.Remove(realTankPlayers[rand2]);
             }
             else if(rand == 2)
             {
@@ -552,10 +564,10 @@ public class Campaign : MonoBehaviour
 
             rand = (int)Random.Range(1,4);
             if(rand == 1){
-                rand2 = Random.Range(0, tankPlayers.Count);
-                Player sub = tankPlayers[rand2];
+                rand2 = Random.Range(0, realTankPlayers.Count);
+                Player sub = realTankPlayers[rand2];
                 teamsCopy4[i].p9 = sub;
-                tankPlayers.Remove(tankPlayers[rand2]);
+                realTankPlayers.Remove(realTankPlayers[rand2]);
             }
             else if(rand == 2)
             {
@@ -579,9 +591,216 @@ public class Campaign : MonoBehaviour
         {
             teamsCopy4[i].fillRoles();
         }
+        checkDupes();
         }
-        
     }
+
+    public void checkDupes()
+    {
+        List<Player> temp = new List<Player>();
+        bool dupe = false;
+        for(int i = 1; i < teamsCopy4.Length; i++)
+        {
+            for(int j = 0; j < 11; j++)
+            {
+                if(teamsCopy4[i].players[j] != nullPlayer)
+                {
+                    for(int k = 0; k < temp.Count; k++)
+                    {
+                        if(teamsCopy4[i].players[j].ign == temp[k].ign)
+                        {
+                            dupe = true;
+                        }
+                    }
+                    if(!dupe)
+                        temp.Add(teamsCopy4[i].players[j]);
+                    else
+                    {
+                        Debug.Log(teamsCopy4[i].brand + " " + teamsCopy4[i].players[j]);
+                        teamsCopy4[i].players[j] = nullPlayer;
+                        teamsCopy4[i].setPlayer(j, nullPlayer);
+                        dupe = false;
+                        if(j == 0)
+                            teamsCopy4[i].p1 = nullPlayer;
+                        else if(j == 1)
+                            teamsCopy4[i].p2 = nullPlayer;
+                        else if(j == 2)
+                            teamsCopy4[i].p3 = nullPlayer;
+                        else if(j == 3)
+                            teamsCopy4[i].p4 = nullPlayer;
+                        else if(j == 4)
+                            teamsCopy4[i].p5 = nullPlayer;
+                        else if(j == 5)
+                            teamsCopy4[i].p6 = nullPlayer;
+                        else if(j == 6)
+                            teamsCopy4[i].p7 = nullPlayer;
+                        else if(j == 7)
+                            teamsCopy4[i].p8 = nullPlayer;
+                        else if(j == 8)
+                            teamsCopy4[i].p9 = nullPlayer;
+                        else if(j == 9)
+                            teamsCopy4[i].p10 = nullPlayer;
+                        else if(j == 10)
+                            teamsCopy4[i].p11 = nullPlayer;
+                        else if(j == 11)
+                            teamsCopy4[i].p12 = nullPlayer;
+                    }
+                }
+                for(int h = 0; h < teamsCopy4.Length; h++)
+                {
+                    teamsCopy4[h].fillRoles();
+                }
+            }
+        }
+        for(int i = 0; i < realTankPlayers.Count-1; i++)
+        {
+            for(int j = 0; j < temp.Count-1; j++)
+            {
+                if(realTankPlayers[i].ign == temp[j].ign)
+                {
+                    realTankPlayers.RemoveAt(i);
+                }
+            }
+        }
+        for(int i = 0; i < dpsPlayers.Count-1; i++)
+        {
+            for(int j = 0; j < temp.Count-1; j++)
+            {
+                if(dpsPlayers[i].ign == temp[j].ign)
+                {
+                    dpsPlayers.RemoveAt(i);
+                }
+            }
+        }
+        for(int i = 0; i < supportPlayers.Count-1; i++)
+        {
+            for(int j = 0; j < temp.Count-1; j++)
+            {
+                if(supportPlayers[i].ign == temp[j].ign)
+                {
+                    supportPlayers.RemoveAt(i);
+                }
+            }
+        }
+        refill();
+        Debug.Log("refilled");
+        for(int i = 0; i < teamsCopy4.Length; i++)
+        {
+            recenter(teamsCopy4[i]);
+        }
+        Debug.Log("Recentered");
+        postDupesFill();
+        Debug.Log("fin");
+    }
+
+    public void refill()
+    {
+        List<Player> tankTemp = new List<Player>();
+        List<Player> dpsTemp = new List<Player>();
+        List<Player> supportTemp = new List<Player>();
+
+        for(int i = 0; i < teamsCopy4.Length; i++)
+        {
+            for(int j = 0; j < 11; j++)
+            {
+                if(teamsCopy4[i].players[j].role == "Tank")
+                {
+                    tankTemp.Add(teamsCopy4[i].players[j]);
+                }
+                else if(teamsCopy4[i].players[j].role == "DPS")
+                {
+                    dpsTemp.Add(teamsCopy4[i].players[j]);
+                }
+                else if(teamsCopy4[i].players[j].role == "Support")
+                {
+                    supportTemp.Add(teamsCopy4[i].players[j]);
+                }
+            }
+        }
+
+        realTankPlayers.Clear();
+        dpsPlayers.Clear();
+        supportPlayers.Clear();
+
+       foreach (Player p in tankCopy)
+       {
+            if (!tankTemp.Contains(p))
+                realTankPlayers.Add(p);
+       }
+
+       foreach (Player p in dpsCopy)
+       {
+            if (!dpsTemp.Contains(p))
+                dpsPlayers.Add(p);
+       }
+
+       foreach (Player p in supportCopy)
+       {
+            if (!supportTemp.Contains(p))
+                supportPlayers.Add(p);
+       }
+    }
+
+    public void recenter(Team t)
+    {
+        Array.Sort(t.players, (a, b) => b.skill.CompareTo(a.skill));
+        t.p1 = t.players[0];
+        t.p2 = t.players[1];
+        t.p3 = t.players[2];
+        t.p4 = t.players[3];
+        t.p5 = t.players[4];
+        t.p6 = t.players[5];
+        t.p7 = t.players[6];
+        t.p8 = t.players[7];
+        t.p9 = t.players[8];
+        t.p10 = t.players[9];
+        t.p11 = t.players[10];
+        t.p12 = t.players[11];
+        t.fillRoles();
+    }
+
+
+    public void postDupesFill()
+    {
+        int deeps = 0;
+        int tankers = 0;
+        int sups = 0;
+
+        for(int i = 0; i < teamsCopy4.Length; i++)
+        {
+            deeps = teamsCopy4[i].getDPSCount();
+            tankers = teamsCopy4[i].getTankCount();
+            sups = teamsCopy4[i].getSupportCount();
+
+            while(deeps < 3)
+            {
+                recenter(teamsCopy4[i]);
+                currentPlayer = dpsPlayers[0];
+                AddPlayerNPC(teamsCopy4[i]);
+                recenter(teamsCopy4[i]);
+                deeps++;
+            }
+            while(tankers < 3)
+            {
+                recenter(teamsCopy4[i]);
+                currentPlayer = realTankPlayers[0];
+                AddPlayerNPC(teamsCopy4[i]);
+                recenter(teamsCopy4[i]);
+                tankers++;
+            }
+            while(sups < 3)
+            {
+                recenter(teamsCopy4[i]);
+                currentPlayer = supportPlayers[0];
+                AddPlayerNPC(teamsCopy4[i]);
+                recenter(teamsCopy4[i]);
+                sups++;
+            }
+
+        }
+    }
+
+
 
     public int getScore(Player p, int currentMap)
     {
@@ -1362,11 +1581,11 @@ public class Campaign : MonoBehaviour
 
     public void ScoutingTank()
     {
-        int tank = (int)Random.Range(0,tankPlayers.Count);
-        String name = tankPlayers[tank].ign;
-        String skill = tankPlayers[tank].skill.ToString();
+        int tank = (int)Random.Range(0,realTankPlayers.Count);
+        String name = realTankPlayers[tank].ign;
+        String skill = realTankPlayers[tank].skill.ToString();
         scouting2.text = $"{name}\n{skill}";
-        currentPlayer = tankPlayers[tank];
+        currentPlayer = realTankPlayers[tank];
     }
 
     public void ScoutingDPS()
@@ -1422,7 +1641,7 @@ public class Campaign : MonoBehaviour
             }
             if(currentPlayer.role == "Tank")
             {
-                tankPlayers.Remove(currentPlayer);
+                realTankPlayers.Remove(currentPlayer);
             }
             else if(currentPlayer.role == "DPS")
             {
@@ -1473,7 +1692,7 @@ public class Campaign : MonoBehaviour
             }
             if(currentPlayer.role == "Tank")
             {
-                tankPlayers.Remove(currentPlayer);
+                realTankPlayers.Remove(currentPlayer);
             }
             else if(currentPlayer.role == "DPS")
             {
@@ -1608,7 +1827,7 @@ public class Campaign : MonoBehaviour
             //winner.text = "Champions: " + firstP;
             //runnerUp.text = "Runner Ups: " + secondP;
             postSeason = false;
-            //Franchise();
+            Franchise();
         }
 
         else if(sNumber == 6)
@@ -1625,7 +1844,7 @@ public class Campaign : MonoBehaviour
             //winner.text = "Champions: " + firstP;
             //runnerUp.text = "Runner Ups: " + secondP;
             postSeason = false;
-            //Franchise();
+            Franchise();
         }
 
         else if(sNumber == 7)
@@ -1642,7 +1861,6 @@ public class Campaign : MonoBehaviour
             //winner.text = "Champions: " + firstP;
             //runnerUp.text = "Runner Ups: " + secondP;
             postSeason = false;
-            //Franchise();
         }
 
         else if(sNumber == 8)
@@ -1687,7 +1905,7 @@ public class Campaign : MonoBehaviour
             {
                 if(t.players[i].role == "Tank")
                 {
-                    tanksPlayer.Add(t.players[i]);
+                    realTankPlayers.Add(t.players[i]);
                 }
                 else if(t.players[i].role == "Support")
                 {
@@ -1699,7 +1917,6 @@ public class Campaign : MonoBehaviour
                 }
                 t.players[i] = nullPlayer;
                 t.setPlayer(i, nullPlayer);
-                Debug.Log(t.players[i]);
             }
         }
         t.p1 = nullPlayer;
@@ -1729,7 +1946,6 @@ public class Campaign : MonoBehaviour
         {
             for(int i = 1; i < teamList2.Length; i++)
             {
-                Debug.Log(teamList2[i].brand);
                 ClearTeam(teamList2[i]);
             }
             ogPlayers.Clear();
@@ -1762,5 +1978,27 @@ public class Campaign : MonoBehaviour
         keepnums = 0;
         playerCount = 0;
         ogs = true;
+        
+        realTankPlayers.Clear();
+        dpsPlayers.Clear();
+        supportPlayers.Clear();
+
+        for(int i = 0; i < tankCopy.Count; i++)
+        {
+            if(!ogPlayers.Contains(tankCopy[i]))
+                realTankPlayers.Add(tankCopy[i]);
+        }
+        for(int i = 0; i < dpsCopy.Count; i++)
+        {
+            if(!ogPlayers.Contains(dpsCopy[i]))
+                dpsPlayers.Add(dpsCopy[i]);
+        }
+        for(int i = 0; i < supportCopy.Count; i++)
+        {
+            if(!ogPlayers.Contains(supportCopy[i]))
+                supportPlayers.Add(supportCopy[i]);
+        }
+        
+
     }
 }
