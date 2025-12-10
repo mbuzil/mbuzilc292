@@ -29,6 +29,358 @@ public class Campaign : MonoBehaviour
     [SerializeField] TextMeshProUGUI Welcome;
     [SerializeField] TextMeshProUGUI draftPlayer;
     
+    [SerializeField] TextMeshProUGUI score1;
+    [SerializeField] TextMeshProUGUI score2;
+    [SerializeField] TextMeshProUGUI score3;
+    [SerializeField] TextMeshProUGUI score4;
+    [SerializeField] TextMeshProUGUI score5;
+    [SerializeField] TextMeshProUGUI score6;
+    [SerializeField] TextMeshProUGUI score7;
+    [SerializeField] TextMeshProUGUI score8;
+    [SerializeField] TextMeshProUGUI score9;
+    [SerializeField] TextMeshProUGUI score10;
+    [SerializeField] TextMeshProUGUI score11;
+    [SerializeField] TextMeshProUGUI score12;
+    [SerializeField] TextMeshProUGUI score13;
+    [SerializeField] TextMeshProUGUI score14;
+    [SerializeField] TextMeshProUGUI score15;
+
+    [SerializeField] TextMeshProUGUI score16;
+    [SerializeField] TextMeshProUGUI score17;
+    [SerializeField] TextMeshProUGUI score18;
+    [SerializeField] TextMeshProUGUI score19;
+    [SerializeField] TextMeshProUGUI score20;
+    [SerializeField] TextMeshProUGUI score21;
+    [SerializeField] TextMeshProUGUI score22;
+    [SerializeField] TextMeshProUGUI score23;
+    [SerializeField] TextMeshProUGUI score24;
+    [SerializeField] TextMeshProUGUI score25;
+    [SerializeField] TextMeshProUGUI score26;
+    [SerializeField] TextMeshProUGUI score27;
+    [SerializeField] TextMeshProUGUI score28;
+    [SerializeField] TextMeshProUGUI score29;
+    [SerializeField] TextMeshProUGUI score30;
+    [SerializeField] TextMeshProUGUI score31;
+    [SerializeField] TextMeshProUGUI score32;
+    [SerializeField] TextMeshProUGUI score33;
+    [SerializeField] TextMeshProUGUI score34;
+    [SerializeField] TextMeshProUGUI score35;
+    [SerializeField] TextMeshProUGUI score36;
+    [SerializeField] TextMeshProUGUI score37;
+    [SerializeField] TextMeshProUGUI score38;
+    [SerializeField] TextMeshProUGUI score39;
+    [SerializeField] TextMeshProUGUI score40;
+    [SerializeField] TextMeshProUGUI score41;
+    [SerializeField] TextMeshProUGUI score42;
+    [SerializeField] TextMeshProUGUI score43;
+    [SerializeField] TextMeshProUGUI score44;
+    [SerializeField] TextMeshProUGUI score45;
+    [SerializeField] TextMeshProUGUI score46;
+    [SerializeField] TextMeshProUGUI score47;
+    [SerializeField] TextMeshProUGUI score48;
+    [SerializeField] TextMeshProUGUI score49;
+    [SerializeField] TextMeshProUGUI score50;
+    [SerializeField] TextMeshProUGUI score51;
+    [SerializeField] TextMeshProUGUI score52;
+    [SerializeField] TextMeshProUGUI score53;
+    [SerializeField] TextMeshProUGUI score54;
+    [SerializeField] TextMeshProUGUI score55;
+    [SerializeField] TextMeshProUGUI score56;
+    [SerializeField] TextMeshProUGUI score57;
+    [SerializeField] TextMeshProUGUI score58;
+    [SerializeField] TextMeshProUGUI score59;
+    [SerializeField] TextMeshProUGUI score60;
+
+    public String Score1 = "";
+    public String Score2 = "";
+    public String Score3 = "";
+    public String Score4 = "";
+    public String Score5 = "";
+    public String Score6 = "";
+    public String Score7 = "";
+    public String Score8 = "";
+    public String Score9 = "";
+    public String Score10 = "";
+    public String Score11 = "";
+    public String Score12 = "";
+    public String Score13 = "";
+    public String Score14 = "";
+    public String Score15 = "";
+
+    public String s2Score1 = "";
+    public String s2Score2 = "";
+    public String s2Score3 = "";
+    public String s2Score4 = "";
+    public String s2Score5 = "";
+    public String s2Score6 = "";
+    public String s2Score7 = "";
+    public String s2Score8 = "";
+    public String s2Score9 = "";
+    public String s2Score10 = "";
+    public String s2Score11 = "";
+    public String s2Score12 = "";
+    public String s2Score13 = "";
+    public String s2Score14 = "";
+    public String s2Score15 = "";
+
+    public String s3Score1 = "";
+    public String s3Score2 = "";
+    public String s3Score3 = "";
+    public String s3Score4 = "";
+    public String s3Score5 = "";
+    public String s3Score6 = "";
+    public String s3Score7 = "";
+    public String s3Score8 = "";
+    public String s3Score9 = "";
+    public String s3Score10 = "";
+    public String s3Score11 = "";
+    public String s3Score12 = "";
+    public String s3Score13 = "";
+    public String s3Score14 = "";
+    public String s3Score15 = "";
+
+
+    public String Score16 = "";
+    public String Score17 = "";
+    public String Score18 = "";
+    public String Score19 = "";
+    public String Score20 = "";
+    public String Score21 = "";
+    public String Score22 = "";
+    public String Score23 = "";
+    public String Score24 = "";
+    public String Score25 = "";
+    public String Score26 = "";
+    public String Score27 = "";
+    public String Score28 = "";
+    public String Score29 = "";
+    public String Score30 = "";
+    public String Score31 = "";
+    public String Score32 = "";
+    public String Score33 = "";
+    public String Score34 = "";
+    public String Score35 = "";
+    public String Score36 = "";
+    public String Score37 = "";
+    public String Score38 = "";
+    public String Score39 = "";
+    public String Score40 = "";
+    public String Score41 = "";
+    public String Score42 = "";
+    public String Score43 = "";
+    public String Score44 = "";
+    public String Score45 = "";
+    public String Score46 = "";
+    public String Score47 = "";
+    public String Score48 = "";
+    public String Score49 = "";
+    public String Score50 = "";
+    public String Score51 = "";
+    public String Score52 = "";
+    public String Score53 = "";
+    public String Score54 = "";
+    public String Score55 = "";
+    public String Score56 = "";
+    public String Score57 = "";
+    public String Score58 = "";
+    public String Score59 = "";
+    public String Score60 = "";
+
+    public String s5Score16 = "";
+    public String s5Score17 = "";
+    public String s5Score18 = "";
+    public String s5Score19 = "";
+    public String s5Score20 = "";
+    public String s5Score21 = "";
+    public String s5Score22 = "";
+    public String s5Score23 = "";
+    public String s5Score24 = "";
+    public String s5Score25 = "";
+    public String s5Score26 = "";
+    public String s5Score27 = "";
+    public String s5Score28 = "";
+    public String s5Score29 = "";
+    public String s5Score30 = "";
+    public String s5Score31 = "";
+    public String s5Score32 = "";
+    public String s5Score33 = "";
+    public String s5Score34 = "";
+    public String s5Score35 = "";
+    public String s5Score36 = "";
+    public String s5Score37 = "";
+    public String s5Score38 = "";
+    public String s5Score39 = "";
+    public String s5Score40 = "";
+    public String s5Score41 = "";
+    public String s5Score42 = "";
+    public String s5Score43 = "";
+    public String s5Score44 = "";
+    public String s5Score45 = "";
+    public String s5Score46 = "";
+    public String s5Score47 = "";
+    public String s5Score48 = "";
+    public String s5Score49 = "";
+    public String s5Score50 = "";
+    public String s5Score51 = "";
+    public String s5Score52 = "";
+    public String s5Score53 = "";
+    public String s5Score54 = "";
+    public String s5Score55 = "";
+    public String s5Score56 = "";
+    public String s5Score57 = "";
+    public String s5Score58 = "";
+    public String s5Score59 = "";
+    public String s5Score60 = "";
+
+    public String s6Score16 = "";
+    public String s6Score17 = "";
+    public String s6Score18 = "";
+    public String s6Score19 = "";
+    public String s6Score20 = "";
+    public String s6Score21 = "";
+    public String s6Score22 = "";
+    public String s6Score23 = "";
+    public String s6Score24 = "";
+    public String s6Score25 = "";
+    public String s6Score26 = "";
+    public String s6Score27 = "";
+    public String s6Score28 = "";
+    public String s6Score29 = "";
+    public String s6Score30 = "";
+    public String s6Score31 = "";
+    public String s6Score32 = "";
+    public String s6Score33 = "";
+    public String s6Score34 = "";
+    public String s6Score35 = "";
+    public String s6Score36 = "";
+    public String s6Score37 = "";
+    public String s6Score38 = "";
+    public String s6Score39 = "";
+    public String s6Score40 = "";
+    public String s6Score41 = "";
+    public String s6Score42 = "";
+    public String s6Score43 = "";
+    public String s6Score44 = "";
+    public String s6Score45 = "";
+    public String s6Score46 = "";
+    public String s6Score47 = "";
+    public String s6Score48 = "";
+    public String s6Score49 = "";
+    public String s6Score50 = "";
+    public String s6Score51 = "";
+    public String s6Score52 = "";
+    public String s6Score53 = "";
+    public String s6Score54 = "";
+    public String s6Score55 = "";
+    public String s6Score56 = "";
+    public String s6Score57 = "";
+    public String s6Score58 = "";
+    public String s6Score59 = "";
+    public String s6Score60 = "";
+
+    public String s7Score16 = "";
+    public String s7Score17 = "";
+    public String s7Score18 = "";
+    public String s7Score19 = "";
+    public String s7Score20 = "";
+    public String s7Score21 = "";
+    public String s7Score22 = "";
+    public String s7Score23 = "";
+    public String s7Score24 = "";
+    public String s7Score25 = "";
+    public String s7Score26 = "";
+    public String s7Score27 = "";
+    public String s7Score28 = "";
+    public String s7Score29 = "";
+    public String s7Score30 = "";
+    public String s7Score31 = "";
+    public String s7Score32 = "";
+    public String s7Score33 = "";
+    public String s7Score34 = "";
+    public String s7Score35 = "";
+    public String s7Score36 = "";
+    public String s7Score37 = "";
+    public String s7Score38 = "";
+    public String s7Score39 = "";
+    public String s7Score40 = "";
+    public String s7Score41 = "";
+    public String s7Score42 = "";
+    public String s7Score43 = "";
+    public String s7Score44 = "";
+    public String s7Score45 = "";
+    public String s7Score46 = "";
+    public String s7Score47 = "";
+    public String s7Score48 = "";
+    public String s7Score49 = "";
+    public String s7Score50 = "";
+    public String s7Score51 = "";
+    public String s7Score52 = "";
+    public String s7Score53 = "";
+    public String s7Score54 = "";
+    public String s7Score55 = "";
+    public String s7Score56 = "";
+    public String s7Score57 = "";
+    public String s7Score58 = "";
+    public String s7Score59 = "";
+    public String s7Score60 = "";
+
+    public String s8Score16 = "";
+    public String s8Score17 = "";
+    public String s8Score18 = "";
+    public String s8Score19 = "";
+    public String s8Score20 = "";
+    public String s8Score21 = "";
+    public String s8Score22 = "";
+    public String s8Score23 = "";
+    public String s8Score24 = "";
+    public String s8Score25 = "";
+    public String s8Score26 = "";
+    public String s8Score27 = "";
+    public String s8Score28 = "";
+    public String s8Score29 = "";
+    public String s8Score30 = "";
+    public String s8Score31 = "";
+    public String s8Score32 = "";
+    public String s8Score33 = "";
+    public String s8Score34 = "";
+    public String s8Score35 = "";
+    public String s8Score36 = "";
+    public String s8Score37 = "";
+    public String s8Score38 = "";
+    public String s8Score39 = "";
+    public String s8Score40 = "";
+    public String s8Score41 = "";
+    public String s8Score42 = "";
+    public String s8Score43 = "";
+    public String s8Score44 = "";
+    public String s8Score45 = "";
+    public String s8Score46 = "";
+    public String s8Score47 = "";
+    public String s8Score48 = "";
+    public String s8Score49 = "";
+    public String s8Score50 = "";
+    public String s8Score51 = "";
+    public String s8Score52 = "";
+    public String s8Score53 = "";
+    public String s8Score54 = "";
+    public String s8Score55 = "";
+    public String s8Score56 = "";
+    public String s8Score57 = "";
+    public String s8Score58 = "";
+    public String s8Score59 = "";
+    public String s8Score60 = "";
+
+    [SerializeField] TextMeshProUGUI BWinner;
+
+    public String WinnerString1;
+    public String WinnerString2;
+    public String WinnerString3;
+    public String WinnerString4;
+    public String WinnerString5;
+    public String WinnerString6;
+    public String WinnerString7;
+    public String WinnerString8;
+
     int maps = 0;
     public int sNumber = 0;
     public bool postSeason;
@@ -339,6 +691,8 @@ public class Campaign : MonoBehaviour
             drafting = false;
             supportEmblem.SetActive(false);
             Franchising.SetActive(false);
+            showTeam();
+            showTeam();
             fillTeams();
 
             LunaticHai.setBrand("Seoul Dynasty");
@@ -616,7 +970,6 @@ public class Campaign : MonoBehaviour
                         temp.Add(teamsCopy4[i].players[j]);
                     else
                     {
-                        Debug.Log(teamsCopy4[i].brand + " " + teamsCopy4[i].players[j]);
                         teamsCopy4[i].players[j] = nullPlayer;
                         teamsCopy4[i].setPlayer(j, nullPlayer);
                         dupe = false;
@@ -652,45 +1005,14 @@ public class Campaign : MonoBehaviour
                 }
             }
         }
-        for(int i = 0; i < realTankPlayers.Count-1; i++)
-        {
-            for(int j = 0; j < temp.Count-1; j++)
-            {
-                if(realTankPlayers[i].ign == temp[j].ign)
-                {
-                    realTankPlayers.RemoveAt(i);
-                }
-            }
-        }
-        for(int i = 0; i < dpsPlayers.Count-1; i++)
-        {
-            for(int j = 0; j < temp.Count-1; j++)
-            {
-                if(dpsPlayers[i].ign == temp[j].ign)
-                {
-                    dpsPlayers.RemoveAt(i);
-                }
-            }
-        }
-        for(int i = 0; i < supportPlayers.Count-1; i++)
-        {
-            for(int j = 0; j < temp.Count-1; j++)
-            {
-                if(supportPlayers[i].ign == temp[j].ign)
-                {
-                    supportPlayers.RemoveAt(i);
-                }
-            }
-        }
+        
         refill();
-        Debug.Log("refilled");
         for(int i = 0; i < teamsCopy4.Length; i++)
         {
             recenter(teamsCopy4[i]);
         }
-        Debug.Log("Recentered");
         postDupesFill();
-        Debug.Log("fin");
+        postDupesFill();
     }
 
     public void refill()
@@ -1185,49 +1507,1129 @@ public class Campaign : MonoBehaviour
             if(sNumber == 1)
             {
                 if(!postSeason){
-                o1.wins++;
+                    o1.wins++;
+                    if(Score1 == "")
+                    {
+                        Score1 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score2 == "")
+                    {
+                        Score2 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score3 == "")
+                    {
+                        Score3 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score4 == "")
+                    {
+                        Score4 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score5 == "")
+                    {
+                        Score5 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score6 == "")
+                    {
+                        Score6 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score7 == "")
+                    {
+                        Score7 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score8 == "")
+                    {
+                        Score8 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score9 == "")
+                    {
+                        Score9 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score10 == "")
+                    {
+                        Score10 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score11 == "")
+                    {
+                        Score11 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score12 == "")
+                    {
+                        Score12 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score13 == "")
+                    {
+                        Score13 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score14 == "")
+                    {
+                        Score14 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score15 == "")
+                    {
+                        Score15 = $"{mapWins1}-{mapWins2}";
+                    }
                 }
             }
             else if(sNumber == 2)
             {
                 if(!postSeason){
-                o1.wins2++;
+                    o1.wins2++;
+                    if(s2Score1 == "")
+                    {
+                        s2Score1 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s2Score2 == "")
+                    {
+                        s2Score2 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s2Score3 == "")
+                    {
+                        s2Score3 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s2Score4 == "")
+                    {
+                        s2Score4 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s2Score5 == "")
+                    {
+                        s2Score5 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s2Score6 == "")
+                    {
+                        s2Score6 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s2Score7 == "")
+                    {
+                        s2Score7 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s2Score8 == "")
+                    {
+                        s2Score8 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s2Score9 == "")
+                    {
+                        s2Score9 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s2Score10 == "")
+                    {
+                        s2Score10 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s2Score11 == "")
+                    {
+                        s2Score11 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s2Score12 == "")
+                    {
+                        s2Score12 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s2Score13 == "")
+                    {
+                        s2Score13 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s2Score14 == "")
+                    {
+                        s2Score14 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s2Score15 == "")
+                    {
+                        s2Score15 = $"{mapWins1}-{mapWins2}";
+                    }
                 }
             }
             else if(sNumber == 3)
             {
                 if(!postSeason){
-                o1.wins3++;
+                    o1.wins3++;
+                    if(s3Score1 == "")
+                    {
+                        s3Score1 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s3Score2 == "")
+                    {
+                        s3Score2 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s3Score3 == "")
+                    {
+                        s3Score3 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s3Score4 == "")
+                    {
+                        s3Score4 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s3Score5 == "")
+                    {
+                        s3Score5 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s3Score6 == "")
+                    {
+                        s3Score6 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s3Score7 == "")
+                    {
+                        s3Score7 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s3Score8 == "")
+                    {
+                        s3Score8 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s3Score9 == "")
+                    {
+                        s3Score9 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s3Score10 == "")
+                    {
+                        s3Score10 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s3Score11 == "")
+                    {
+                        s3Score11 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s3Score12 == "")
+                    {
+                        s3Score12 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s3Score13 == "")
+                    {
+                        s3Score13 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s3Score14 == "")
+                    {
+                        s3Score14 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s3Score15 == "")
+                    {
+                        s3Score15 = $"{mapWins1}-{mapWins2}";
+                    }
                 }
             }
             else if(sNumber == 4)
             {
                 if(!postSeason){
-                o1.wins4++;
+                    o1.wins4++;
+                    if(Score16 == "")
+                    {
+                        Score16 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score17 == "")
+                    {
+                        Score17 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score18 == "")
+                    {
+                        Score18 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score19 == "")
+                    {
+                        Score19 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score20 == "")
+                    {
+                        Score20 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score21 == "")
+                    {
+                        Score21 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score22 == "")
+                    {
+                        Score22 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score23 == "")
+                    {
+                        Score23 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score24 == "")
+                    {
+                        Score24 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score25 == "")
+                    {
+                        Score25 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score26 == "")
+                    {
+                        Score26 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score27 == "")
+                    {
+                        Score27 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score28 == "")
+                    {
+                        Score28 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score29 == "")
+                    {
+                        Score29 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score30 == "")
+                    {
+                        Score30 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score31 == "")
+                    {
+                        Score31 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score32 == "")
+                    {
+                        Score32 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score33 == "")
+                    {
+                        Score33 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score34 == "")
+                    {
+                        Score34 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score35 == "")
+                    {
+                        Score35 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score36 == "")
+                    {
+                        Score36 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score37 == "")
+                    {
+                        Score37 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score38 == "")
+                    {
+                        Score38= $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score39 == "")
+                    {
+                        Score39 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score40 == "")
+                    {
+                        Score40 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score41 == "")
+                    {
+                        Score41 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score42 == "")
+                    {
+                        Score42 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score43 == "")
+                    {
+                        Score43 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score44 == "")
+                    {
+                        Score44 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score45 == "")
+                    {
+                        Score45 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score46 == "")
+                    {
+                        Score46 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score47 == "")
+                    {
+                        Score47 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score48 == "")
+                    {
+                        Score48 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score49 == "")
+                    {
+                        Score49 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score50 == "")
+                    {
+                        Score50 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score51 == "")
+                    {
+                        Score51 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score52 == "")
+                    {
+                        Score52 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score53 == "")
+                    {
+                        Score53 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score54 == "")
+                    {
+                        Score54 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score55 == "")
+                    {
+                        Score55 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score56 == "")
+                    {
+                        Score56 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score57 == "")
+                    {
+                        Score57 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score58 == "")
+                    {
+                        Score58 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score59 == "")
+                    {
+                        Score59 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score60 == "")
+                    {
+                        Score60 = $"{mapWins1}-{mapWins2}";
+                    }
                 }
             }
             else if(sNumber == 5)
             {
                 if(!postSeason){
-                o1.wins5++;
+                    o1.wins5++;
+                    if(s5Score16 == "")
+                    {
+                        s5Score16 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score17 == "")
+                    {
+                        s5Score17 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score18 == "")
+                    {
+                        s5Score18 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score19 == "")
+                    {
+                        s5Score19 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score20 == "")
+                    {
+                        s5Score20 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score21 == "")
+                    {
+                        s5Score21 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score22 == "")
+                    {
+                        s5Score22 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score23 == "")
+                    {
+                        s5Score23 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score24 == "")
+                    {
+                        s5Score24 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score25 == "")
+                    {
+                        s5Score25 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score26 == "")
+                    {
+                        s5Score26 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score27 == "")
+                    {
+                        s5Score27 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score28 == "")
+                    {
+                        s5Score28 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score29 == "")
+                    {
+                        s5Score29 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score30 == "")
+                    {
+                        s5Score30 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score31 == "")
+                    {
+                        s5Score31 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score32 == "")
+                    {
+                        s5Score32 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score33 == "")
+                    {
+                        s5Score33 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score34 == "")
+                    {
+                        s5Score34 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score35 == "")
+                    {
+                        s5Score35 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score36 == "")
+                    {
+                        s5Score36 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score37 == "")
+                    {
+                        s5Score37 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score38 == "")
+                    {
+                        s5Score38= $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score39 == "")
+                    {
+                        s5Score39 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score40 == "")
+                    {
+                        s5Score40 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score41 == "")
+                    {
+                        s5Score41 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score42 == "")
+                    {
+                        s5Score42 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score43 == "")
+                    {
+                        s5Score43 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score44 == "")
+                    {
+                        s5Score44 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score45 == "")
+                    {
+                        s5Score45 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score46 == "")
+                    {
+                        s5Score46 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score47 == "")
+                    {
+                        s5Score47 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score48 == "")
+                    {
+                        s5Score48 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score49 == "")
+                    {
+                        s5Score49 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score50 == "")
+                    {
+                        s5Score50 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score51 == "")
+                    {
+                        s5Score51 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score52 == "")
+                    {
+                        s5Score52 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score53 == "")
+                    {
+                        s5Score53 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score54 == "")
+                    {
+                        s5Score54 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score55 == "")
+                    {
+                        s5Score55 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score56 == "")
+                    {
+                        s5Score56 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score57 == "")
+                    {
+                        s5Score57 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score58 == "")
+                    {
+                        s5Score58 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score59 == "")
+                    {
+                        s5Score59 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score60 == "")
+                    {
+                        s5Score60 = $"{mapWins1}-{mapWins2}";
+                    }
                 }
             }
             else if(sNumber == 6)
             {
                 if(!postSeason){
-                o1.wins6++;
+                    o1.wins6++;
+                    if(s6Score16 == "")
+                    {
+                        s6Score16 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score17 == "")
+                    {
+                        s6Score17 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score18 == "")
+                    {
+                        s6Score18 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score19 == "")
+                    {
+                        s6Score19 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score20 == "")
+                    {
+                        s6Score20 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score21 == "")
+                    {
+                        s6Score21 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score22 == "")
+                    {
+                        s6Score22 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score23 == "")
+                    {
+                        s6Score23 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score24 == "")
+                    {
+                        s6Score24 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score25 == "")
+                    {
+                        s6Score25 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score26 == "")
+                    {
+                        s6Score26 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score27 == "")
+                    {
+                        s6Score27 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score28 == "")
+                    {
+                        s6Score28 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score29 == "")
+                    {
+                        s6Score29 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score30 == "")
+                    {
+                        s6Score30 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score31 == "")
+                    {
+                        s6Score31 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score32 == "")
+                    {
+                        s6Score32 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score33 == "")
+                    {
+                        s6Score33 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score34 == "")
+                    {
+                        s6Score34 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score35 == "")
+                    {
+                        s6Score35 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score36 == "")
+                    {
+                        s6Score36 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score37 == "")
+                    {
+                        s6Score37 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score38 == "")
+                    {
+                        s6Score38= $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score39 == "")
+                    {
+                        s6Score39 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score40 == "")
+                    {
+                        s6Score40 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score41 == "")
+                    {
+                        s6Score41 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score42 == "")
+                    {
+                        s6Score42 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score43 == "")
+                    {
+                        s6Score43 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score44 == "")
+                    {
+                        s6Score44 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score45 == "")
+                    {
+                        s6Score45 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score46 == "")
+                    {
+                        s6Score46 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score47 == "")
+                    {
+                        s6Score47 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score48 == "")
+                    {
+                        s6Score48 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score49 == "")
+                    {
+                        s6Score49 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score50 == "")
+                    {
+                        s6Score50 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score51 == "")
+                    {
+                        s6Score51 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score52 == "")
+                    {
+                        s6Score52 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score53 == "")
+                    {
+                        s6Score53 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score54 == "")
+                    {
+                        s6Score54 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score55 == "")
+                    {
+                        s6Score55 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score56 == "")
+                    {
+                        s6Score56 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score57 == "")
+                    {
+                        s6Score57 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score58 == "")
+                    {
+                        s6Score58 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score59 == "")
+                    {
+                        s6Score59 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score60 == "")
+                    {
+                        s6Score60 = $"{mapWins1}-{mapWins2}";
+                    }
                 }
             }
             else if(sNumber == 7)
             {
                 if(!postSeason){
-                o1.wins7++;
+                    o1.wins7++;
+                    if(s7Score16 == "")
+                    {
+                        s7Score16 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score17 == "")
+                    {
+                        s7Score17 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score18 == "")
+                    {
+                        s7Score18 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score19 == "")
+                    {
+                        s7Score19 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score20 == "")
+                    {
+                        s7Score20 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score21 == "")
+                    {
+                        s7Score21 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score22 == "")
+                    {
+                        s7Score22 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score23 == "")
+                    {
+                        s7Score23 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score24 == "")
+                    {
+                        s7Score24 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score25 == "")
+                    {
+                        s7Score25 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score26 == "")
+                    {
+                        s7Score26 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score27 == "")
+                    {
+                        s7Score27 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score28 == "")
+                    {
+                        s7Score28 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score29 == "")
+                    {
+                        s7Score29 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score30 == "")
+                    {
+                        s7Score30 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score31 == "")
+                    {
+                        s7Score31 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score32 == "")
+                    {
+                        s7Score32 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score33 == "")
+                    {
+                        s7Score33 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score34 == "")
+                    {
+                        s7Score34 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score35 == "")
+                    {
+                        s7Score35 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score36 == "")
+                    {
+                        s7Score36 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score37 == "")
+                    {
+                        s7Score37 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score38 == "")
+                    {
+                        s7Score38= $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score39 == "")
+                    {
+                        s7Score39 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score40 == "")
+                    {
+                        s7Score40 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score41 == "")
+                    {
+                        s7Score41 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score42 == "")
+                    {
+                        s7Score42 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score43 == "")
+                    {
+                        s7Score43 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score44 == "")
+                    {
+                        s7Score44 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score45 == "")
+                    {
+                        s7Score45 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score46 == "")
+                    {
+                        s7Score46 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score47 == "")
+                    {
+                        s7Score47 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score48 == "")
+                    {
+                        s7Score48 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score49 == "")
+                    {
+                        s7Score49 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score50 == "")
+                    {
+                        s7Score50 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score51 == "")
+                    {
+                        s7Score51 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score52 == "")
+                    {
+                        s7Score52 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score53 == "")
+                    {
+                        s7Score53 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score54 == "")
+                    {
+                        s7Score54 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score55 == "")
+                    {
+                        s7Score55 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score56 == "")
+                    {
+                        s7Score56 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score57 == "")
+                    {
+                        s7Score57 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score58 == "")
+                    {
+                        s7Score58 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score59 == "")
+                    {
+                        s7Score59 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score60 == "")
+                    {
+                        s7Score60 = $"{mapWins1}-{mapWins2}";
+                    }
                 }
             }
             else if(sNumber == 8)
             {
                 if(!postSeason){
-                o1.wins8++;
+                    o1.wins8++;
+                    if(s8Score16 == "")
+                    {
+                        s8Score16 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score17 == "")
+                    {
+                        s8Score17 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score18 == "")
+                    {
+                        s8Score18 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score19 == "")
+                    {
+                        s8Score19 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score20 == "")
+                    {
+                        s8Score20 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score21 == "")
+                    {
+                        s8Score21 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score22 == "")
+                    {
+                        s8Score22 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score23 == "")
+                    {
+                        s8Score23 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score24 == "")
+                    {
+                        s8Score24 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score25 == "")
+                    {
+                        s8Score25 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score26 == "")
+                    {
+                        s8Score26 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score27 == "")
+                    {
+                        s8Score27 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score28 == "")
+                    {
+                        s8Score28 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score29 == "")
+                    {
+                        s8Score29 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score30 == "")
+                    {
+                        s8Score30 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score31 == "")
+                    {
+                        s8Score31 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score32 == "")
+                    {
+                        s8Score32 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score33 == "")
+                    {
+                        s8Score33 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score34 == "")
+                    {
+                        s8Score34 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score35 == "")
+                    {
+                        s8Score35 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score36 == "")
+                    {
+                        s8Score36 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score37 == "")
+                    {
+                        s8Score37 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score38 == "")
+                    {
+                        s8Score38= $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score39 == "")
+                    {
+                        s8Score39 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score40 == "")
+                    {
+                        s8Score40 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score41 == "")
+                    {
+                        s8Score41 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score42 == "")
+                    {
+                        s8Score42 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score43 == "")
+                    {
+                        s8Score43 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score44 == "")
+                    {
+                        s8Score44 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score45 == "")
+                    {
+                        s8Score45 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score46 == "")
+                    {
+                        s8Score46 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score47 == "")
+                    {
+                        s8Score47 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score48 == "")
+                    {
+                        s8Score48 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score49 == "")
+                    {
+                        s8Score49 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score50 == "")
+                    {
+                        s8Score50 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score51 == "")
+                    {
+                        s8Score51 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score52 == "")
+                    {
+                        s8Score52 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score53 == "")
+                    {
+                        s8Score53 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score54 == "")
+                    {
+                        s8Score54 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score55 == "")
+                    {
+                        s8Score55 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score56 == "")
+                    {
+                        s8Score56 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score57 == "")
+                    {
+                        s8Score57 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score58 == "")
+                    {
+                        s8Score58 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score59 == "")
+                    {
+                        s8Score59 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score60 == "")
+                    {
+                        s8Score60 = $"{mapWins1}-{mapWins2}";
+                    }
                 }
             }
             
@@ -1239,49 +2641,1109 @@ public class Campaign : MonoBehaviour
             if(sNumber == 1)
             {
                 if(!postSeason){
-                o2.wins++;
+                    o2.wins++;
+                    if(Score1 == "")
+                    {
+                        Score1 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score2 == "")
+                    {
+                        Score2 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score3 == "")
+                    {
+                        Score3 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score4 == "")
+                    {
+                        Score4 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score5 == "")
+                    {
+                        Score5 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score6 == "")
+                    {
+                        Score6 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score7 == "")
+                    {
+                        Score7 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score8 == "")
+                    {
+                        Score8 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score9 == "")
+                    {
+                        Score9 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score10 == "")
+                    {
+                        Score10 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score11 == "")
+                    {
+                        Score11 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score12 == "")
+                    {
+                        Score12 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score13 == "")
+                    {
+                        Score13 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score14 == "")
+                    {
+                        Score14 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score15 == "")
+                    {
+                        Score15 = $"{mapWins1}-{mapWins2}";
+                    }
                 }
             }
             else if(sNumber == 2)
             {
                 if(!postSeason){
-                o2.wins2++;
+                    o2.wins2++;
+                    if(s2Score1 == "")
+                    {
+                        s2Score1 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s2Score2 == "")
+                    {
+                        s2Score2 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s2Score3 == "")
+                    {
+                        s2Score3 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s2Score4 == "")
+                    {
+                        s2Score4 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s2Score5 == "")
+                    {
+                        s2Score5 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s2Score6 == "")
+                    {
+                        s2Score6 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s2Score7 == "")
+                    {
+                        s2Score7 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s2Score8 == "")
+                    {
+                        s2Score8 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s2Score9 == "")
+                    {
+                        s2Score9 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s2Score10 == "")
+                    {
+                        s2Score10 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s2Score11 == "")
+                    {
+                        s2Score11 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s2Score12 == "")
+                    {
+                        s2Score12 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s2Score13 == "")
+                    {
+                        s2Score13 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s2Score14 == "")
+                    {
+                        s2Score14 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s2Score15 == "")
+                    {
+                        s2Score15 = $"{mapWins1}-{mapWins2}";
+                    }
                 }
             }
             else if(sNumber == 3)
             {
                 if(!postSeason){
-                o2.wins3++;
+                    o2.wins3++;
+                    if(s3Score1 == "")
+                    {
+                        s3Score1 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s3Score2 == "")
+                    {
+                        s3Score2 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s3Score3 == "")
+                    {
+                        s3Score3 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s3Score4 == "")
+                    {
+                        s3Score4 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s3Score5 == "")
+                    {
+                        s3Score5 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s3Score6 == "")
+                    {
+                        s3Score6 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s3Score7 == "")
+                    {
+                        s3Score7 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s3Score8 == "")
+                    {
+                        s3Score8 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s3Score9 == "")
+                    {
+                        s3Score9 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s3Score10 == "")
+                    {
+                        s3Score10 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s3Score11 == "")
+                    {
+                        s3Score11 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s3Score12 == "")
+                    {
+                        s3Score12 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s3Score13 == "")
+                    {
+                        s3Score13 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s3Score14 == "")
+                    {
+                        s3Score14 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s3Score15 == "")
+                    {
+                        s3Score15 = $"{mapWins1}-{mapWins2}";
+                    }
                 }
             }
             else if(sNumber == 4)
             {
                 if(!postSeason){
-                o2.wins4++;
+                    o2.wins4++;
+                    if(Score16 == "")
+                    {
+                        Score16 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score17 == "")
+                    {
+                        Score17 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score18 == "")
+                    {
+                        Score18 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score19 == "")
+                    {
+                        Score19 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score20 == "")
+                    {
+                        Score20 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score21 == "")
+                    {
+                        Score21 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score22 == "")
+                    {
+                        Score22 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score23 == "")
+                    {
+                        Score23 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score24 == "")
+                    {
+                        Score24 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score25 == "")
+                    {
+                        Score25 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score26 == "")
+                    {
+                        Score26 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score27 == "")
+                    {
+                        Score28 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score29 == "")
+                    {
+                        Score29 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score30 == "")
+                    {
+                        Score30 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score31 == "")
+                    {
+                        Score31 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score32 == "")
+                    {
+                        Score32 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score33 == "")
+                    {
+                        Score33 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score34 == "")
+                    {
+                        Score34 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score35 == "")
+                    {
+                        Score35 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score36 == "")
+                    {
+                        Score36 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score37 == "")
+                    {
+                        Score37 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score38 == "")
+                    {
+                        Score38= $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score39 == "")
+                    {
+                        Score39 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score40 == "")
+                    {
+                        Score40 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score41 == "")
+                    {
+                        Score41 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score42 == "")
+                    {
+                        Score42 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score43 == "")
+                    {
+                        Score43 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score44 == "")
+                    {
+                        Score44 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score45 == "")
+                    {
+                        Score45 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score46 == "")
+                    {
+                        Score46 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score47 == "")
+                    {
+                        Score47 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score48 == "")
+                    {
+                        Score48 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score49 == "")
+                    {
+                        Score49 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score50 == "")
+                    {
+                        Score50 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score51 == "")
+                    {
+                        Score51 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score52 == "")
+                    {
+                        Score52 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score53 == "")
+                    {
+                        Score53 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score54 == "")
+                    {
+                        Score54 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score55 == "")
+                    {
+                        Score55 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score56 == "")
+                    {
+                        Score56 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score57 == "")
+                    {
+                        Score57 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score58 == "")
+                    {
+                        Score58 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score59 == "")
+                    {
+                        Score59 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(Score60 == "")
+                    {
+                        Score60 = $"{mapWins1}-{mapWins2}";
+                    }
                 }
             }
             else if(sNumber == 5)
             {
                 if(!postSeason){
-                o2.wins5++;
+                    o2.wins5++;
+                    if(s5Score16 == "")
+                    {
+                        s5Score16 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score17 == "")
+                    {
+                        s5Score17 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score18 == "")
+                    {
+                        s5Score18 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score19 == "")
+                    {
+                        s5Score19 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score20 == "")
+                    {
+                        s5Score20 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score21 == "")
+                    {
+                        s5Score21 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score22 == "")
+                    {
+                        s5Score22 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score23 == "")
+                    {
+                        s5Score23 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score24 == "")
+                    {
+                        s5Score24 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score25 == "")
+                    {
+                        s5Score25 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score26 == "")
+                    {
+                        s5Score26 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score27 == "")
+                    {
+                        s5Score28 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score29 == "")
+                    {
+                        s5Score29 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score30 == "")
+                    {
+                        s5Score30 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score31 == "")
+                    {
+                        s5Score31 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score32 == "")
+                    {
+                        s5Score32 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score33 == "")
+                    {
+                        s5Score33 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score34 == "")
+                    {
+                        s5Score34 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score35 == "")
+                    {
+                        s5Score35 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score36 == "")
+                    {
+                        s5Score36 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score37 == "")
+                    {
+                        s5Score37 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score38 == "")
+                    {
+                        s5Score38= $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score39 == "")
+                    {
+                        s5Score39 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score40 == "")
+                    {
+                        s5Score40 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score41 == "")
+                    {
+                        s5Score41 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score42 == "")
+                    {
+                        s5Score42 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score43 == "")
+                    {
+                        s5Score43 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score44 == "")
+                    {
+                        s5Score44 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score45 == "")
+                    {
+                        s5Score45 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score46 == "")
+                    {
+                        s5Score46 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score47 == "")
+                    {
+                        s5Score47 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score48 == "")
+                    {
+                        s5Score48 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score49 == "")
+                    {
+                        s5Score49 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score50 == "")
+                    {
+                        s5Score50 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score51 == "")
+                    {
+                        s5Score51 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score52 == "")
+                    {
+                        s5Score52 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score53 == "")
+                    {
+                        s5Score53 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score54 == "")
+                    {
+                        s5Score54 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score55 == "")
+                    {
+                        s5Score55 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score56 == "")
+                    {
+                        s5Score56 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score57 == "")
+                    {
+                        s5Score57 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score58 == "")
+                    {
+                        s5Score58 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score59 == "")
+                    {
+                        s5Score59 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s5Score60 == "")
+                    {
+                        s5Score60 = $"{mapWins1}-{mapWins2}";
+                    }
                 }
             }
             else if(sNumber == 6)
             {
                 if(!postSeason){
-                o2.wins6++;
+                    o2.wins6++;
+                    if(s6Score16 == "")
+                    {
+                        s6Score16 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score17 == "")
+                    {
+                        s6Score17 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score18 == "")
+                    {
+                        s6Score18 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score19 == "")
+                    {
+                        s6Score19 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score20 == "")
+                    {
+                        s6Score20 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score21 == "")
+                    {
+                        s6Score21 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score22 == "")
+                    {
+                        s6Score22 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score23 == "")
+                    {
+                        s6Score23 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score24 == "")
+                    {
+                        s6Score24 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score25 == "")
+                    {
+                        s6Score25 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score26 == "")
+                    {
+                        s6Score26 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score27 == "")
+                    {
+                        s6Score28 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score29 == "")
+                    {
+                        s6Score29 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score30 == "")
+                    {
+                        s6Score30 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score31 == "")
+                    {
+                        s6Score31 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score32 == "")
+                    {
+                        s6Score32 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score33 == "")
+                    {
+                        s6Score33 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score34 == "")
+                    {
+                        s6Score34 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score35 == "")
+                    {
+                        s6Score35 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score36 == "")
+                    {
+                        s6Score36 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score37 == "")
+                    {
+                        s6Score37 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score38 == "")
+                    {
+                        s6Score38= $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score39 == "")
+                    {
+                        s6Score39 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score40 == "")
+                    {
+                        s6Score40 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score41 == "")
+                    {
+                        s6Score41 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score42 == "")
+                    {
+                        s6Score42 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score43 == "")
+                    {
+                        s6Score43 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score44 == "")
+                    {
+                        s6Score44 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score45 == "")
+                    {
+                        s6Score45 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score46 == "")
+                    {
+                        s6Score46 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score47 == "")
+                    {
+                        s6Score47 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score48 == "")
+                    {
+                        s6Score48 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score49 == "")
+                    {
+                        s6Score49 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score50 == "")
+                    {
+                        s6Score50 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score51 == "")
+                    {
+                        s6Score51 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score52 == "")
+                    {
+                        s6Score52 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score53 == "")
+                    {
+                        s6Score53 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score54 == "")
+                    {
+                        s6Score54 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score55 == "")
+                    {
+                        s6Score55 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score56 == "")
+                    {
+                        s6Score56 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score57 == "")
+                    {
+                        s6Score57 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score58 == "")
+                    {
+                        s6Score58 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score59 == "")
+                    {
+                        s6Score59 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s6Score60 == "")
+                    {
+                        s6Score60 = $"{mapWins1}-{mapWins2}";
+                    }
                 }
             }
             else if(sNumber == 7)
             {
                 if(!postSeason){
-                o2.wins7++;
+                    o2.wins7++;
+                    if(s7Score16 == "")
+                    {
+                        s7Score16 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score17 == "")
+                    {
+                        s7Score17 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score18 == "")
+                    {
+                        s7Score18 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score19 == "")
+                    {
+                        s7Score19 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score20 == "")
+                    {
+                        s7Score20 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score21 == "")
+                    {
+                        s7Score21 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score22 == "")
+                    {
+                        s7Score22 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score23 == "")
+                    {
+                        s7Score23 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score24 == "")
+                    {
+                        s7Score24 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score25 == "")
+                    {
+                        s7Score25 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score26 == "")
+                    {
+                        s7Score26 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score27 == "")
+                    {
+                        s7Score28 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score29 == "")
+                    {
+                        s7Score29 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score30 == "")
+                    {
+                        s7Score30 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score31 == "")
+                    {
+                        s7Score31 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score32 == "")
+                    {
+                        s7Score32 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score33 == "")
+                    {
+                        s7Score33 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score34 == "")
+                    {
+                        s7Score34 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score35 == "")
+                    {
+                        s7Score35 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score36 == "")
+                    {
+                        s7Score36 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score37 == "")
+                    {
+                        s7Score37 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score38 == "")
+                    {
+                        s7Score38= $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score39 == "")
+                    {
+                        s7Score39 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score40 == "")
+                    {
+                        s7Score40 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score41 == "")
+                    {
+                        s7Score41 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score42 == "")
+                    {
+                        s7Score42 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score43 == "")
+                    {
+                        s7Score43 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score44 == "")
+                    {
+                        s7Score44 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score45 == "")
+                    {
+                        s7Score45 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score46 == "")
+                    {
+                        s7Score46 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score47 == "")
+                    {
+                        s7Score47 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score48 == "")
+                    {
+                        s7Score48 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score49 == "")
+                    {
+                        s7Score49 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score50 == "")
+                    {
+                        s7Score50 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score51 == "")
+                    {
+                        s7Score51 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score52 == "")
+                    {
+                        s7Score52 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score53 == "")
+                    {
+                        s7Score53 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score54 == "")
+                    {
+                        s7Score54 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score55 == "")
+                    {
+                        s7Score55 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score56 == "")
+                    {
+                        s7Score56 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score57 == "")
+                    {
+                        s7Score57 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score58 == "")
+                    {
+                        s7Score58 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score59 == "")
+                    {
+                        s7Score59 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s7Score60 == "")
+                    {
+                        s7Score60 = $"{mapWins1}-{mapWins2}";
+                    }
                 }
             }
             else if(sNumber == 8)
             {
                 if(!postSeason){
-                o2.wins8++;
+                    o2.wins8++;
+                    if(s8Score16 == "")
+                    {
+                        s8Score16 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score17 == "")
+                    {
+                        s8Score17 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score18 == "")
+                    {
+                        s8Score18 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score19 == "")
+                    {
+                        s8Score19 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score20 == "")
+                    {
+                        s8Score20 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score21 == "")
+                    {
+                        s8Score21 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score22 == "")
+                    {
+                        s8Score22 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score23 == "")
+                    {
+                        s8Score23 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score24 == "")
+                    {
+                        s8Score24 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score25 == "")
+                    {
+                        s8Score25 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score26 == "")
+                    {
+                        s8Score26 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score27 == "")
+                    {
+                        s8Score28 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score29 == "")
+                    {
+                        s8Score29 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score30 == "")
+                    {
+                        s8Score30 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score31 == "")
+                    {
+                        s8Score31 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score32 == "")
+                    {
+                        s8Score32 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score33 == "")
+                    {
+                        s8Score33 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score34 == "")
+                    {
+                        s8Score34 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score35 == "")
+                    {
+                        s8Score35 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score36 == "")
+                    {
+                        s8Score36 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score37 == "")
+                    {
+                        s8Score37 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score38 == "")
+                    {
+                        s8Score38= $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score39 == "")
+                    {
+                        s8Score39 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score40 == "")
+                    {
+                        s8Score40 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score41 == "")
+                    {
+                        s8Score41 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score42 == "")
+                    {
+                        s8Score42 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score43 == "")
+                    {
+                        s8Score43 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score44 == "")
+                    {
+                        s8Score44 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score45 == "")
+                    {
+                        s8Score45 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score46 == "")
+                    {
+                        s8Score46 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score47 == "")
+                    {
+                        s8Score47 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score48 == "")
+                    {
+                        s8Score48 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score49 == "")
+                    {
+                        s8Score49 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score50 == "")
+                    {
+                        s8Score50 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score51 == "")
+                    {
+                        s8Score51 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score52 == "")
+                    {
+                        s8Score52 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score53 == "")
+                    {
+                        s8Score53 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score54 == "")
+                    {
+                        s8Score54 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score55 == "")
+                    {
+                        s8Score55 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score56 == "")
+                    {
+                        s8Score56 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score57 == "")
+                    {
+                        s8Score57 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score58 == "")
+                    {
+                        s8Score58 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score59 == "")
+                    {
+                        s8Score59 = $"{mapWins1}-{mapWins2}";
+                    }
+                    else if(s8Score60 == "")
+                    {
+                        s8Score60 = $"{mapWins1}-{mapWins2}";
+                    }
                 }
             }
             Debug.Log($"{o2.brand} wins the series {mapWins2}-{mapWins1}");
@@ -1505,14 +3967,329 @@ public class Campaign : MonoBehaviour
         return s1-1;
     }
 
-
-    public void pressButt()
+    public void seeS1()
     {
-            match(GCBusan, LunaticHai);
+        score1.text = Score1;
+        score2.text = Score2;
+        score3.text = Score3;
+        score4.text = Score4;
+        score5.text = Score5;
+        score6.text = Score6;
+        score7.text = Score7;
+        score8.text = Score8;
+        score9.text = Score9;
+        score10.text = Score10;
+        score11.text = Score11;
+        score12.text = Score12;
+        score13.text = Score13;
+        score14.text = Score14;
+        score15.text = Score15;
+
+        BWinner.text = WinnerString1;
     }
+
+    public void seeS2()
+    {
+        score1.text = s2Score1;
+        score2.text = s2Score2;
+        score3.text = s2Score3;
+        score4.text = s2Score4;
+        score5.text = s2Score5;
+        score6.text = s2Score6;
+        score7.text = s2Score7;
+        score8.text = s2Score8;
+        score9.text = s2Score9;
+        score10.text = s2Score10;
+        score11.text = s2Score11;
+        score12.text = s2Score12;
+        score13.text = s2Score13;
+        score14.text = s2Score14;
+        score15.text = s2Score15;
+
+        BWinner.text = WinnerString2;
+    }
+
+    public void seeS3()
+    {
+        score1.text = s3Score1;
+        score2.text = s3Score2;
+        score3.text = s3Score3;
+        score4.text = s3Score4;
+        score5.text = s3Score5;
+        score6.text = s3Score6;
+        score7.text = s3Score7;
+        score8.text = s3Score8;
+        score9.text = s3Score9;
+        score10.text = s3Score10;
+        score11.text = s3Score11;
+        score12.text = s3Score12;
+        score13.text = s3Score13;
+        score14.text = s3Score14;
+        score15.text = s3Score15;
+
+        BWinner.text = WinnerString3;
+    }
+
+    public void seeS4()
+    {
+        score16.text = Score16;
+        score17.text = Score17;
+        score18.text = Score18;
+        score19.text = Score19;
+        score20.text = Score20;
+        score21.text = Score21;
+        score22.text = Score22;
+        score23.text = Score23;
+        score24.text = Score24;
+        score25.text = Score25;
+        score26.text = Score26;
+        score27.text = Score27;
+        score28.text = Score28;
+        score29.text = Score29;
+        score30.text = Score30;
+        score31.text = Score31;
+        score32.text = Score32;
+        score33.text = Score33;
+        score34.text = Score34;
+        score35.text = Score35;
+        score36.text = Score36;
+        score37.text = Score37;
+        score38.text = Score38;
+        score39.text = Score39;
+        score40.text = Score40;
+        score41.text = Score41;
+        score42.text = Score42;
+        score43.text = Score43;
+        score44.text = Score44;
+        score45.text = Score45;
+        score46.text = Score46;
+        score47.text = Score47;
+        score48.text = Score48;
+        score49.text = Score49;
+        score50.text = Score50;
+        score51.text = Score51;
+        score52.text = Score52;
+        score53.text = Score53;
+        score54.text = Score54;
+        score55.text = Score55;
+        score56.text = Score56;
+        score57.text = Score57;
+        score58.text = Score58;
+        score59.text = Score59;
+        score60.text = Score60;
+
+        BWinner.text = WinnerString4;
+    }
+
+    public void seeS5()
+    {
+        score16.text = s5Score16;
+        score17.text = s5Score17;
+        score18.text = s5Score18;
+        score19.text = s5Score19;
+        score20.text = s5Score20;
+        score21.text = s5Score21;
+        score22.text = s5Score22;
+        score23.text = s5Score23;
+        score24.text = s5Score24;
+        score25.text = s5Score25;
+        score26.text = s5Score26;
+        score27.text = s5Score27;
+        score28.text = s5Score28;
+        score29.text = s5Score29;
+        score30.text = s5Score30;
+        score31.text = s5Score31;
+        score32.text = s5Score32;
+        score33.text = s5Score33;
+        score34.text = s5Score34;
+        score35.text = s5Score35;
+        score36.text = s5Score36;
+        score37.text = s5Score37;
+        score38.text = s5Score38;
+        score39.text = s5Score39;
+        score40.text = s5Score40;
+        score41.text = s5Score41;
+        score42.text = s5Score42;
+        score43.text = s5Score43;
+        score44.text = s5Score44;
+        score45.text = s5Score45;
+        score46.text = s5Score46;
+        score47.text = s5Score47;
+        score48.text = s5Score48;
+        score49.text = s5Score49;
+        score50.text = s5Score50;
+        score51.text = s5Score51;
+        score52.text = s5Score52;
+        score53.text = s5Score53;
+        score54.text = s5Score54;
+        score55.text = s5Score55;
+        score56.text = s5Score56;
+        score57.text = s5Score57;
+        score58.text = s5Score58;
+        score59.text = s5Score59;
+        score60.text = s5Score60;
+        BWinner.text = WinnerString5;
+    }
+
+    public void seeS6()
+    {
+        score16.text = s6Score16;
+        score17.text = s6Score17;
+        score18.text = s6Score18;
+        score19.text = s6Score19;
+        score20.text = s6Score20;
+        score21.text = s6Score21;
+        score22.text = s6Score22;
+        score23.text = s6Score23;
+        score24.text = s6Score24;
+        score25.text = s6Score25;
+        score26.text = s6Score26;
+        score27.text = s6Score27;
+        score28.text = s6Score28;
+        score29.text = s6Score29;
+        score30.text = s6Score30;
+        score31.text = s6Score31;
+        score32.text = s6Score32;
+        score33.text = s6Score33;
+        score34.text = s6Score34;
+        score35.text = s6Score35;
+        score36.text = s6Score36;
+        score37.text = s6Score37;
+        score38.text = s6Score38;
+        score39.text = s6Score39;
+        score40.text = s6Score40;
+        score41.text = s6Score41;
+        score42.text = s6Score42;
+        score43.text = s6Score43;
+        score44.text = s6Score44;
+        score45.text = s6Score45;
+        score46.text = s6Score46;
+        score47.text = s6Score47;
+        score48.text = s6Score48;
+        score49.text = s6Score49;
+        score50.text = s6Score50;
+        score51.text = s6Score51;
+        score52.text = s6Score52;
+        score53.text = s6Score53;
+        score54.text = s6Score54;
+        score55.text = s6Score55;
+        score56.text = s6Score56;
+        score57.text = s6Score57;
+        score58.text = s6Score58;
+        score59.text = s6Score59;
+        score60.text = s6Score60;
+
+        BWinner.text = WinnerString6;
+    }
+
+    public void seeS7()
+    {
+        score16.text = s7Score16;
+        score17.text = s7Score17;
+        score18.text = s7Score18;
+        score19.text = s7Score19;
+        score20.text = s7Score20;
+        score21.text = s7Score21;
+        score22.text = s7Score22;
+        score23.text = s7Score23;
+        score24.text = s7Score24;
+        score25.text = s7Score25;
+        score26.text = s7Score26;
+        score27.text = s7Score27;
+        score28.text = s7Score28;
+        score29.text = s7Score29;
+        score30.text = s7Score30;
+        score31.text = s7Score31;
+        score32.text = s7Score32;
+        score33.text = s7Score33;
+        score34.text = s7Score34;
+        score35.text = s7Score35;
+        score36.text = s7Score36;
+        score37.text = s7Score37;
+        score38.text = s7Score38;
+        score39.text = s7Score39;
+        score40.text = s7Score40;
+        score41.text = s7Score41;
+        score42.text = s7Score42;
+        score43.text = s7Score43;
+        score44.text = s7Score44;
+        score45.text = s7Score45;
+        score46.text = s7Score46;
+        score47.text = s7Score47;
+        score48.text = s7Score48;
+        score49.text = s7Score49;
+        score50.text = s7Score50;
+        score51.text = s7Score51;
+        score52.text = s7Score52;
+        score53.text = s7Score53;
+        score54.text = s7Score54;
+        score55.text = s7Score55;
+        score56.text = s7Score56;
+        score57.text = s7Score57;
+        score58.text = s7Score58;
+        score59.text = s7Score59;
+        score60.text = s7Score60;
+
+        BWinner.text = WinnerString7;
+    }
+
+    public void seeS8()
+    {
+        score16.text = s8Score16;
+        score17.text = s8Score17;
+        score18.text = s8Score18;
+        score19.text = s8Score19;
+        score20.text = s8Score20;
+        score21.text = s8Score21;
+        score22.text = s8Score22;
+        score23.text = s8Score23;
+        score24.text = s8Score24;
+        score25.text = s8Score25;
+        score26.text = s8Score26;
+        score27.text = s8Score27;
+        score28.text = s8Score28;
+        score29.text = s8Score29;
+        score30.text = s8Score30;
+        score31.text = s8Score31;
+        score32.text = s8Score32;
+        score33.text = s8Score33;
+        score34.text = s8Score34;
+        score35.text = s8Score35;
+        score36.text = s8Score36;
+        score37.text = s8Score37;
+        score38.text = s8Score38;
+        score39.text = s8Score39;
+        score40.text = s8Score40;
+        score41.text = s8Score41;
+        score42.text = s8Score42;
+        score43.text = s8Score43;
+        score44.text = s8Score44;
+        score45.text = s8Score45;
+        score46.text = s8Score46;
+        score47.text = s8Score47;
+        score48.text = s8Score48;
+        score49.text = s8Score49;
+        score50.text = s8Score50;
+        score51.text = s8Score51;
+        score52.text = s8Score52;
+        score53.text = s8Score53;
+        score54.text = s8Score54;
+        score55.text = s8Score55;
+        score56.text = s8Score56;
+        score57.text = s8Score57;
+        score58.text = s8Score58;
+        score59.text = s8Score59;
+        score60.text = s8Score60;
+
+        BWinner.text = WinnerString8;
+    }
+
+
 
     public void tourney()
     {   
+        showTeam();
+        showTeam();
         sNumber++;
         if(sNumber <= 3)
         {
@@ -1525,6 +4302,8 @@ public class Campaign : MonoBehaviour
                 match(teamList[i], teamList[j]);
             }
         }
+
+
         }
         else
         {
@@ -1652,7 +4431,8 @@ public class Campaign : MonoBehaviour
                 supportPlayers.Remove(currentPlayer);
             }
         }
-        
+        showTeam();
+        showTeam();
         timer = 6;
         NPCScouting();
     }
@@ -1760,8 +4540,7 @@ public class Campaign : MonoBehaviour
             else
                 secondP1 = t1.brand;
 
-            //winner.text = "Champions: " + firstP;
-            //runnerUp.text = "Runner Ups: " + secondP;
+            WinnerString1 = "Champions: " + S1Winner + "\nRunner Ups: " + secondP1;
             postSeason = false;
         }
         
@@ -1776,8 +4555,7 @@ public class Campaign : MonoBehaviour
             else
                 secondP2 = t1.brand;
 
-            //winner.text = "Champions: " + firstP;
-            //runnerUp.text = "Runner Ups: " + secondP;
+            WinnerString2 = "Champions: " + S2Winner + "\nRunner Ups: " + secondP2;
             postSeason = false;
         }
         else if(sNumber == 3)
@@ -1791,8 +4569,7 @@ public class Campaign : MonoBehaviour
             else
                 secondP3 = t1.brand;
 
-            //winner.text = "Champions: " + firstP;
-            //runnerUp.text = "Runner Ups: " + secondP;
+            WinnerString3 = "Champions: " + S3Winner + "\nRunner Ups: " + secondP3;
             postSeason = false;
             Franchise();
         }
@@ -1808,8 +4585,7 @@ public class Campaign : MonoBehaviour
             else
                 secondP4 = t1.brand;
 
-            //winner.text = "Champions: " + firstP;
-            //runnerUp.text = "Runner Ups: " + secondP;
+            WinnerString4 = "Champions: " + S4Winner + "\nRunner Ups: " + secondP4;
             postSeason = false;
         }
 
@@ -1824,8 +4600,7 @@ public class Campaign : MonoBehaviour
             else
                 secondP5 = t1.brand;
 
-            //winner.text = "Champions: " + firstP;
-            //runnerUp.text = "Runner Ups: " + secondP;
+            WinnerString5 = "Champions: " + S5Winner + "\nRunner Ups: " + secondP5;
             postSeason = false;
             Franchise();
         }
@@ -1841,8 +4616,7 @@ public class Campaign : MonoBehaviour
             else
                 secondP6 = t1.brand;
 
-            //winner.text = "Champions: " + firstP;
-            //runnerUp.text = "Runner Ups: " + secondP;
+            WinnerString6 = "Champions: " + S6Winner + "\nRunner Ups: " + secondP6;
             postSeason = false;
             Franchise();
         }
@@ -1858,8 +4632,7 @@ public class Campaign : MonoBehaviour
             else
                 secondP7 = t1.brand;
 
-            //winner.text = "Champions: " + firstP;
-            //runnerUp.text = "Runner Ups: " + secondP;
+            WinnerString7 = "Champions: " + S7Winner + "\nRunner Ups: " + secondP7;
             postSeason = false;
         }
 
@@ -1874,8 +4647,7 @@ public class Campaign : MonoBehaviour
             else
                 secondP8 = t1.brand;
 
-            //winner.text = "Champions: " + firstP;
-            //runnerUp.text = "Runner Ups: " + secondP;
+            WinnerString8 = "Champions: " + S8Winner + "\nRunner Ups: " + secondP8;
             postSeason = false;
         }
     }
@@ -1998,7 +4770,5 @@ public class Campaign : MonoBehaviour
             if(!ogPlayers.Contains(supportCopy[i]))
                 supportPlayers.Add(supportCopy[i]);
         }
-        
-
     }
 }
