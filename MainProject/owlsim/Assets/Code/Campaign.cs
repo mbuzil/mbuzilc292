@@ -16,6 +16,12 @@ public class Campaign : MonoBehaviour
     public List<Player> dpsCopy = new List<Player>();
     public List<Player> supportCopy = new List<Player>();
 
+    [SerializeField] GameObject Liq;
+    [SerializeField] GameObject Liq13;
+    [SerializeField] GameObject Liq48;
+
+    [SerializeField] GameObject thx;
+
     [SerializeField] Player nullPlayer;
     [SerializeField] TextMeshProUGUI standings;
     [SerializeField] GameObject ScoutButton;
@@ -416,6 +422,18 @@ public class Campaign : MonoBehaviour
     [SerializeField] GameObject tankEmblem;
     [SerializeField] GameObject supportEmblem;
     [SerializeField] GameObject dpsEmblem;
+
+    [SerializeField] GameObject butt1;
+    [SerializeField] GameObject butt2;
+    [SerializeField] GameObject butt3;
+    [SerializeField] GameObject butt4;
+    [SerializeField] GameObject butt5;
+    [SerializeField] GameObject butt6;
+    [SerializeField] GameObject butt7;
+    [SerializeField] GameObject butt8;
+
+    [SerializeField] GameObject FAButt;
+
 
     
 
@@ -3969,6 +3987,9 @@ public class Campaign : MonoBehaviour
 
     public void seeS1()
     {
+        Liq.SetActive(true);
+        Liq13.SetActive(true);
+        Liq48.SetActive(false);
         score1.text = Score1;
         score2.text = Score2;
         score3.text = Score3;
@@ -3990,6 +4011,9 @@ public class Campaign : MonoBehaviour
 
     public void seeS2()
     {
+        Liq.SetActive(true);
+        Liq13.SetActive(true);
+        Liq48.SetActive(false);
         score1.text = s2Score1;
         score2.text = s2Score2;
         score3.text = s2Score3;
@@ -4011,6 +4035,9 @@ public class Campaign : MonoBehaviour
 
     public void seeS3()
     {
+        Liq.SetActive(true);
+        Liq13.SetActive(true);
+        Liq48.SetActive(false);
         score1.text = s3Score1;
         score2.text = s3Score2;
         score3.text = s3Score3;
@@ -4032,6 +4059,9 @@ public class Campaign : MonoBehaviour
 
     public void seeS4()
     {
+        Liq.SetActive(true);
+        Liq13.SetActive(false);
+        Liq48.SetActive(true);
         score16.text = Score16;
         score17.text = Score17;
         score18.text = Score18;
@@ -4083,6 +4113,9 @@ public class Campaign : MonoBehaviour
 
     public void seeS5()
     {
+        Liq.SetActive(true);
+        Liq13.SetActive(false);
+        Liq48.SetActive(true);
         score16.text = s5Score16;
         score17.text = s5Score17;
         score18.text = s5Score18;
@@ -4133,6 +4166,9 @@ public class Campaign : MonoBehaviour
 
     public void seeS6()
     {
+        Liq.SetActive(true);
+        Liq13.SetActive(false);
+        Liq48.SetActive(true);
         score16.text = s6Score16;
         score17.text = s6Score17;
         score18.text = s6Score18;
@@ -4184,6 +4220,9 @@ public class Campaign : MonoBehaviour
 
     public void seeS7()
     {
+        Liq.SetActive(true);
+        Liq13.SetActive(false);
+        Liq48.SetActive(true);
         score16.text = s7Score16;
         score17.text = s7Score17;
         score18.text = s7Score18;
@@ -4235,6 +4274,9 @@ public class Campaign : MonoBehaviour
 
     public void seeS8()
     {
+        Liq.SetActive(true);
+        Liq13.SetActive(false);
+        Liq48.SetActive(true);
         score16.text = s8Score16;
         score17.text = s8Score17;
         score18.text = s8Score18;
@@ -4284,13 +4326,39 @@ public class Campaign : MonoBehaviour
         BWinner.text = WinnerString8;
     }
 
+    public void unsee()
+    {
+        Liq.SetActive(false);
+        Liq13.SetActive(false);
+        Liq48.SetActive(false);
+    }
 
 
     public void tourney()
     {   
-        showTeam();
-        showTeam();
         sNumber++;
+
+        if(sNumber == 1)
+            butt1.SetActive(true);
+        else if(sNumber == 2)
+            butt2.SetActive(true);
+        else if(sNumber == 3)
+            butt3.SetActive(true);
+        else if(sNumber == 4)
+            butt4.SetActive(true);
+        else if(sNumber == 5)
+            butt5.SetActive(true);
+        else if(sNumber == 6)
+            butt6.SetActive(true);
+        else if(sNumber == 7)
+            butt7.SetActive(true);
+        else if(sNumber == 8){
+            butt8.SetActive(true);
+            nextButton.SetActive(false);
+            thx.SetActive(true);
+        }
+
+
         if(sNumber <= 3)
         {
         for (int i = 0; i < teamList.Length; i++)
@@ -4346,7 +4414,8 @@ public class Campaign : MonoBehaviour
             ScoutButton.SetActive(true);
             nextButton.SetActive(false);
         }
-
+        showTeam();
+        showTeam();
     }
 
     public void scoutingTime()
@@ -4508,6 +4577,7 @@ public class Campaign : MonoBehaviour
 
     }
 
+
     public void bracket()
     {
         String S1Winner = "";
@@ -4571,7 +4641,7 @@ public class Campaign : MonoBehaviour
 
             WinnerString3 = "Champions: " + S3Winner + "\nRunner Ups: " + secondP3;
             postSeason = false;
-            Franchise();
+            FAButt.SetActive(true);
         }
 
         else if(sNumber == 4)
@@ -4602,7 +4672,7 @@ public class Campaign : MonoBehaviour
 
             WinnerString5 = "Champions: " + S5Winner + "\nRunner Ups: " + secondP5;
             postSeason = false;
-            Franchise();
+            FAButt.SetActive(true);
         }
 
         else if(sNumber == 6)
@@ -4618,7 +4688,7 @@ public class Campaign : MonoBehaviour
 
             WinnerString6 = "Champions: " + S6Winner + "\nRunner Ups: " + secondP6;
             postSeason = false;
-            Franchise();
+            FAButt.SetActive(true);
         }
 
         else if(sNumber == 7)
@@ -4707,6 +4777,7 @@ public class Campaign : MonoBehaviour
 
     public void Franchise()
     {
+        FAButt.SetActive(false);
         if(sNumber < 4)
         {
             for(int i = 1; i < teamList.Length; i++)
