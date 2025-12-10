@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
     public int seasonScore;
     public string role;
     public float effectiveSkill;
+    public int age;
 
     public float getSkill()
     {
@@ -46,11 +47,55 @@ public class Player : MonoBehaviour
             if (avgMapScore > effectiveSkill+skill)
             {
                 effectiveSkill += 0.1f;
+                if(effectiveSkill+skill < 120)
+                    effectiveSkill += 0.1f;
+                if(effectiveSkill+skill < 110)
+                    effectiveSkill += 0.1f;
+                if(effectiveSkill+skill < 105)
+                    effectiveSkill += 0.1f;
+                if(effectiveSkill+skill < 100)
+                    effectiveSkill += 0.1f;
+                if(effectiveSkill+skill < 95)
+                    effectiveSkill += 0.1f;
+                if(effectiveSkill+skill < 90)
+                    effectiveSkill += 0.1f;
+                if(effectiveSkill+skill < 85)
+                    effectiveSkill += 0.1f;
+                if(effectiveSkill+skill < 80)
+                    effectiveSkill += 0.1f;
+                if(effectiveSkill+skill < 75)
+                    effectiveSkill += 0.1f;
             }
             else
             {
                 effectiveSkill -= 0.1f;
+                if(age >= 1)
+                    effectiveSkill -= 0.2f;
+                if(age >= 2)
+                    effectiveSkill -= 0.3f;
+                if(age >= 3)
+                    effectiveSkill -= 0.4f;
+                if(age >= 4)
+                    effectiveSkill -= 0.5f;
+                if(age >= 5)
+                    effectiveSkill -= 0.6f;
+                if(age >= 6)
+                    effectiveSkill -= 0.7f;
+                if(age >= 7)
+                    effectiveSkill -= 0.8f;
+                if(age >= 8)
+                    effectiveSkill -= 1f;
             }
+            if(age >= 4)
+                effectiveSkill -= 0.2f;
+            if(age >= 5)
+                effectiveSkill -= 0.2f;
+            if(age >= 6)
+                effectiveSkill -= 0.2f;
+            if(age >= 7)
+                effectiveSkill -= 0.2f;
+            if(age >= 8)
+                effectiveSkill -= 0.2f;
         }
 
         map1Score = 0;
