@@ -15,10 +15,12 @@ public class Campaign : MonoBehaviour
 
     [SerializeField] Player nullPlayer;
     [SerializeField] TextMeshProUGUI standings;
+    [SerializeField] GameObject ScoutButton;
     [SerializeField] GameObject scouting;
     [SerializeField] TextMeshProUGUI scouting2;
     [SerializeField] TextMeshProUGUI timerText;
     [SerializeField] TextMeshProUGUI teamSheet;
+    [SerializeField] GameObject nextButton;
 
     [SerializeField] GameObject Franchising;
     [SerializeField] TextMeshProUGUI Welcome;
@@ -202,6 +204,7 @@ public class Campaign : MonoBehaviour
         teamsCopy8[9] = BostonUprising;
 
         scouting.SetActive(false);
+        nextButton.SetActive(true);
         Franchising.SetActive(false);
 
         teamSheet.text = teamSheetText;
@@ -212,13 +215,14 @@ public class Campaign : MonoBehaviour
     {
         if(timing)
         {
-            timerText.text = $"Timer: {(int)timer}";
+            timerText.text = $"Timer: {(int)timer+1}";
             timer+=Time.deltaTime;
             if(timer >= 5)
             {
                 timing = false;
                 timer = 0;
                 scouting.SetActive(false);
+                nextButton.SetActive(true);
             }
         }
 
@@ -1219,8 +1223,18 @@ public class Campaign : MonoBehaviour
         bracket();
         
         //seasonNumber.text = "Season: " + sNumber;
+        if(sNumber < 3 || sNumber == 4){
+            ScoutButton.SetActive(true);
+            nextButton.SetActive(false);
+        }
+    }
 
+    public void scoutingTime()
+    {
+        ScoutButton.SetActive(false);
         scouting.SetActive(true);
+        currentPlayer = null;
+        scouting2.text = "";
         timing = true;
     }
 
@@ -1364,7 +1378,7 @@ public class Campaign : MonoBehaviour
             {
                 if(LunaticHai.players[i] != nullPlayer)
                 {
-                    teamSheetText += LunaticHai.players[i].ign + "\n";
+                    teamSheetText += LunaticHai.players[i].ign + ": " + (int)(LunaticHai.players[i].skill+LunaticHai.players[i].effectiveSkill) + "\n";
                 }
             }
             teamSheet.text = teamSheetText;
