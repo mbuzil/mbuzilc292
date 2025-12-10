@@ -433,6 +433,8 @@ public class Campaign : MonoBehaviour
     [SerializeField] GameObject butt8;
 
     [SerializeField] GameObject FAButt;
+    [SerializeField] TextMeshProUGUI roster;
+    public String rosterString = "Roster\n";
 
 
     
@@ -612,6 +614,7 @@ public class Campaign : MonoBehaviour
 
         if(drafting)
         {
+            roster.text = rosterString;
             if(ogs)
                 draftPlayer.text = $"Name: {ogPlayers[keepnums].ign}\nSkill: {ogPlayers[keepnums].skill+ogPlayers[keepnums].effectiveSkill}\nTotalScore: {ogPlayers[keepnums].seasonScore}";
             else
@@ -679,6 +682,8 @@ public class Campaign : MonoBehaviour
             Welcome.text = "Welcome to the OWL Draft";
             NextPlayer();
         }
+        rosterString += $"{pSelect.ign}: {pSelect.role} - {pSelect.skill+pSelect.effectiveSkill}\n";
+
 
         if(pSelect.role == "Tank")
         {
@@ -720,7 +725,11 @@ public class Campaign : MonoBehaviour
             Envy.setBrand("Dallas Fuel");
             Rogue.setBrand("Las Angeles Valiant");
 
+            rosterString = "Roster\n";
+
         }
+
+        
     }
 
     public void SkipPlayer()
